@@ -1,0 +1,172 @@
+<!--pages/detail/detail.wxml-->
+<view class='content' class='s-detail'>
+
+  <view class="c-header">
+    <view class="c-header__container">
+        <view>
+            <image class="c-header__logo" src="//www.juwaistatic.com/redstar/assets/images/logo-juwai.a302af13.png"></image>
+        </view>
+        <view class="c-header__search js-search">
+            <navigator>
+               <icon type='search' size='16'></icon>
+               <text>国家 / 州 /省 / 城市 /编号</text>
+            </navigator>
+        </view>
+    </view>
+  </view>
+
+  <view class='slide_img'>
+    <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" mode='widthFix'/>
+      </swiper-item>
+    </block>
+  </swiper>
+  </view>
+  <view class="c-overview o-section">
+      <view class="c-overview__title">澳大利亚维多利亚州波因特库克4卧4卫新开发的新建房产</view>
+      <view class="c-overview__location">Nagle Drive, Point Cook, Victoria, Australia</view>
+      <view class="o-tag"><view class="o-tag__item">近大学</view></view>
+      <view class="c-overview__pricing">
+        <view class="c-overview__price">
+          <view>
+              约¥<text class="c-overview__rmb">163</text>
+              万- 约¥<text class="c-overview__rmb">400</text>万
+          </view>
+          <view class="clearfix">
+              <view class="">AUD320,000- AUD785,000</view>
+          </view>
+        </view>
+      </view>
+      <view class="c-overview__meta clearfix">
+          <view class="">
+              物业编号：35436305
+          </view>
+      </view>
+  </view>
+
+  <view class="c-anchors o-swipe o-container__full-width o-section">
+      <view class="c-anchors__list o-swipe__list js-anchors__toggle-active">
+                  <text class="c-anchors__item o-swipe__item is-active">基本资料</text>
+                  <text class="c-anchors__item o-swipe__item">物业特色</text>
+                  <text class="c-anchors__item o-swipe__item">配套设施</text>
+                  <text class="c-anchors__item o-swipe__item">主力户型</text>
+                  <text class="c-anchors__item o-swipe__item">周边环境</text>
+                  <text class="c-anchors__item o-swipe__item">代理公司</text>
+      </view>
+  </view>
+
+  <view class="c-basic-info o-section" id="c-basic-info">
+    <view class="o-section__name">基本资料</view>
+    <view class="o-read-more" style="height: 56px; max-height: none;">
+        <view class="c-basic-info__container o-read-more__container">
+          <view class="c-basic-info__row">
+              <view class="c-basic-info__cell">浴室的数目：</view>
+              <view class="c-basic-info__cell">4个</view>
+          </view>
+          <view class="c-basic-info__row">
+              <view class="c-basic-info__cell">卧室数量：</view>
+              <view class="c-basic-info__cell">4个</view>
+          </view>                          
+        </view>
+        <view class="o-read-more__toggle js-read-more__toggle">
+            显示更多 <i class="ui-o-icon__angle--down"></i>
+        </view>
+    </view>
+  </view>
+  <!-- 底部 -->
+  <view class="o-footer">
+      <view class="c-footer">
+        <view class="c-footer__title">居外能为您做什么？</view>
+        <view>作为最大型的中文国际房产搜索引擎, 居外网以一站式平台为全球华人提供90个国家逾两百万条环球房源，
+            包括投资型房产、移民型房产、留学类房产、美国 EB-5 投资移民的开发项目等。我们以最具时效的海外房产新闻市场分析和置业指南，
+            助您做出更英明的投资决策。全中文在线房产搜索系统和应用程序也让您得以跨越语言和文化障碍寻觅海外理想家园。
+            <text>
+            居外－－开启您的海外置业之旅！</text>
+        </view>
+        <view class="c-footer__links">
+                <!-- <wxc-flex class="wrap" wrap="wrap" main="center" cross="center" _pid="{{_pid}}"> -->
+                    <view>
+                     <view class="item">关于我们|</view>
+                    <view class="item">加入我们|</view>
+                    <view class="item">媒体报道|</view>
+                    <view class="item">海外房展|</view>
+                    <view class="item">联络我们|</view>
+                    </view>
+                   <view>
+                    <view class="item">版权所有 隐私条款 投资须知|</view>
+                    <view class="item">环球资讯|</view>
+                    <view class="item">Advertise</view>
+                   </view>
+                   
+                <!-- </wxc-flex> -->
+                <text>宏居网络技术（上海）有限公司@JUWAI LIMITEN 2011-2018 版权所有 沪ICP备12045782号</text>
+            </view>
+        
+      </view>
+      <view class="c-navigation c-navigation--detail">
+          <view class="c-navigation__links">
+              <view href="javascript:void 0" class="c-navigation__link c-navigation__link--like">
+                  <icon type=' '></icon>
+                  <text class="c-navigation__text">已收藏</text>
+              </view>
+              
+              
+              
+              
+              <text class="btn ui-o-button c-navigation__button c-navigation__call-us" href="tel:400-041-7515">
+                  咨询客服
+              </text>
+              <text class="btn ui-o-button c-navigation__button _c-navigation__button--center js-navigation__button" href="/enquiry?listing_id=29475901">
+                  免费询盘
+              </text>
+          </view>
+      </view>
+      <view class="modal fade c-isFavorite-modal" id="js-listing-favorite-modal" tabindex="-1" role="dialog" aria-hidden="true">
+          <view class="modal-dialog">
+              <view class="modal-content">
+                  <view class="c-isFavorite-modal__icon">
+                      <i class="fa fa-heart-o"></i>
+                  </view>
+                  <view class="c-isFavorite-modal__remind">
+                      <text>您确定取消收藏此房源吗?</text>
+                  </view>
+                  <view class="c-isFavorite-modal__buttons">
+                      <view class="c-isFavorite-modal__button">
+                          <button type="button" class="btn ui-o-button--primary" data-dismiss="modal">返回</button>
+                      </view>
+                      <view class="c-isFavorite-modal__button">
+                          <button type="button" class="btn ui-o-button js-cancel-favorite__button">取消收藏</button>
+                      </view>
+                  </view>
+              </view>
+          </view>
+      </view>
+      <view class="modal fade c-isFavorite-modal" id="js-agent-favorite-modal" tabindex="-1" role="dialog" aria-hidden="true">
+          <view class="modal-dialog">
+              <view class="modal-content">
+                  <view class="c-isFavorite-modal__icon">
+                      <icon></icon>
+                  </view>
+                  <view class="c-isFavorite-modal__remind">
+                      <text>您确定取消收藏此中介吗?</text>
+                  </view>
+                  <view class="c-isFavorite-modal__buttons">
+                      <view class="c-isFavorite-modal__button">
+                          <button type="button" class="btn ui-o-button--primary" data-dismiss="modal">返回</button>
+                      </view>
+                      <view class="c-isFavorite-modal__button">
+                          <button type="button" class="btn ui-o-button js-cancel-favorite__button">取消收藏</button>
+                      </view>
+                  </view>
+              </view>
+          </view>
+      </view>
+              <view class="c-go-top js-go-top c-go-top--show">
+                  <icon></icon>
+              </view>
+          </view>
+
+</view>

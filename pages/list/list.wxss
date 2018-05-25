@@ -1,0 +1,210 @@
+/* pages/list/list.wxss */
+image{
+  vertical-align: middle
+}
+.s-detail{
+      padding-top: 100rpx;
+    font-size: 24rpx;
+}
+.c-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height:100rpx;
+    border-bottom:4rpx solid #e60000;
+    background-color: #fff;
+}
+.c-header .c-header__container {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 100rpx;
+    padding-right: 20rpx;
+    padding-left: 20rpx;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.c-header .c-header__logo {
+    width: 140rpx;
+    height: 60rpx;
+    margin-right: 20rpx;
+}
+.c-header .c-header__search {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 50rpx;
+    border: 2rpx solid #ddd;
+    border-radius: 8rpx;
+    padding-left: 20rpx;
+    background-color: #f7f7f7;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.c-header__search icon{
+    padding-right: 10rpx;
+    color: #e60000;
+    vertical-align: middle
+}
+.slide_img image{
+  width: 100%
+}
+.o-section {
+    margin-bottom:40rpx;
+}
+.c-overview__title{
+      margin-top: 0;
+    font-size: 32rpx;
+    font-weight: 900;
+}
+.c-overview__location{
+    margin: 0 0 10px;
+}
+.o-tag .o-tag__item {
+    display: inline-block;
+    margin-right: 10rpx;
+    margin-bottom: 10rpx;
+    border: 2rpx solid #e60000;
+    padding: 0 8rpx;
+    font-size: 24rpx;
+    color: #e60000;
+}
+.c-overview{
+  padding: 0 20rpx;
+  margin-top: 40rpx
+}
+.c-overview .c-overview__rmb {
+    font-size: 36rpx;
+    color: #e60000;
+}
+.pull-left {
+    float: left !important;
+}
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+}
+ .c-overview .c-overview__meta {
+    padding-top: 10px;
+    color: #999;
+}
+.c-anchors {
+    border-bottom: 2rpx solid #ddd;
+    padding: 0 10px;
+}
+.c-anchors{
+  padding: 0 20rpx
+}
+.o-swipe .o-swipe__list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.c-anchors .c-anchors__item {
+    margin-top: -4rpx;
+    margin-right: 40rpx;
+    border-bottom: 4rpx solid transparent;
+    font-size: 28rpx;
+}
+.is-active {
+    color: #e60000 !important;
+}
+ .c-anchors .c-anchors__item.is-active {
+    border-bottom-color: #e60000;
+}
+.o-swipe {
+    overflow-x: scroll;
+}
+.o-swipe .o-swipe__item {
+    margin-right: 15px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.o-section {
+    margin-bottom: 40rpx;
+}
+.c-basic-info {
+    font-size: 28rpx;
+}
+.o-section .o-section__name {
+    margin: 0;
+    margin-bottom: 20rpx;
+    font-size:32rpx;
+    font-weight: bolder;
+}
+.o-container {
+    padding: 0 20rpx;
+}
+.c-listings .c-listings__item {
+    position: relative;
+    display: block;
+    margin-top: 20rpx;
+    background-color: #fff;
+}
+.c-listings .c-listings__image {
+    width: 100%;
+    height: calc(100vw * 0.67);
+}
+.c-listings .c-listings__detail {
+    padding: 0 20rpx;
+}
+.c-listings .c-listings__badge {
+    position: absolute;
+    top: 20rpx;
+    left: 20rpx;
+    padding: 2rpx 20rpx;
+    color: #fff;
+    background: #e60000;
+}
+.c-listings .c-listings__favorite {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20rpx;
+    font-size: 36rpx;
+    color: #fff;
+}
+.c-listings .c-listings__price {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 10rpx;
+}
+.c-listings .c-listings__value {
+    font-size: 44rpx;
+    color: #e60000;
+}
+.c-listings .c-listings__title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 10rpx 0;
+    font-size: 32rpx;
+    font-weight: 900;
+}
+.c-listings .c-listings__location {
+    margin-bottom: 10rpx;
+    color: #999;
+}
+.o-tag {
+    margin: 0;
+}
+.o-tag .o-tag__item {
+    display: inline-block;
+    margin-right: 10rpx;
+    margin-bottom: 10rpx;
+    border: 2rpx solid #e60000;
+    padding: 0 8rpx;
+    font-size: 24rpx;
+    color: #e60000;
+}

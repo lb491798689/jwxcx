@@ -80,7 +80,7 @@
                      
                        <scroll-view id="mk-featured__items" class="o-swipe js-featured__items" scroll-x="true" style="width: 100%">
                                       <view class="o-swipe__list">
-                                              <navigator class="o-swipe__item c-featured__item js-featured__item mk-featured__item" url="http://m.juwai.com/property/35436305">
+                                              <navigator url='../detail/detail' class="o-swipe__item c-featured__item js-featured__item mk-featured__item">
                                                   <image class="c-featured__image" src="http://simages6.juwai.com/auto/240x160/store-aa/817fe22d377f310e1e7db06ba4c43479.jpg"></image>
                                                   <view class="c-featured__title">4卧4卫新开发的新建房产</view>
                                                   <view class="c-featured__location">维多利亚州, 波因特库克</view>
@@ -289,7 +289,7 @@
             <image src='../../images/11.jpg'></image>
             <text class="c-navigation__text">首页</text>
         </navigator>
-        <navigator class="c-navigation__link" data-page-name="listings">
+        <navigator url='../list/list' class="c-navigation__link" data-page-name="listings">
             <image src='../../images/22.gif'></image>
             <text class="c-navigation__text">房源</text>
         </navigator>

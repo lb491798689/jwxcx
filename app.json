@@ -4,7 +4,9 @@
     "pages/account/index",
     "pages/enquiry/index",
     "pages/property/index",
-    "pages/location/index"
+    "pages/location/index",
+    "pages/detail/detail",
+    "pages/list/list"
   ],
   "window": {
     "backgroundTextStyle": "dark",
