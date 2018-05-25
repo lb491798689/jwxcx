@@ -1,0 +1,13 @@
+<!--pages/location/index.wxml-->
+<view class="container">
+  <map id="juwaiMap" 
+    latitude="{{latitude}}"
+    longitude="{{longitude}}"
+    scale="{{scale}}"
+    controls="{{controls}}"
+    bindcontroltap="bindcontroltap"
+    polyline="{{polyline}}"
+    markers="{{markers}}"
+    bindmarkertap="bindmarkertap"
+    show-location/>
+</view>
