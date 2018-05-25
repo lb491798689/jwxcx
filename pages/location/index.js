@@ -7,7 +7,81 @@ Page({
   data: {
     scale: 18, // 缩放级别，默认18，数值在0~18之间
     latitude: 0, // 给个默认值
-    longitude: 0 // 给个默认值
+    longitude: 0, // 给个默认值
+    marks: [
+      {
+        "id": 0,
+        "title": "去这里",
+        "iconPath": "/images/markers.png",
+        "latitude": 31.250134,
+        "longitude": 121.498312,
+        "width": 45,
+        "height": 50
+      },
+      {
+        "id": 1,
+        "title": "去这里",
+        "iconPath": "/images/markers.png",
+        "latitude": 32.350134,
+        "longitude": 121.398312,
+        "width": 45,
+        "height": 50
+      },
+      {
+        "id": 2,
+        "title": "去这里",
+        "iconPath": "/images/markers.png",
+        "latitude": 31.450134,
+        "longitude": 122.398312,
+        "width": 45,
+        "height": 50
+      },
+      {
+        "id": 3,
+        "title": "去这里",
+        "iconPath": "/images/markers.png",
+        "latitude": 31.250134,
+        "longitude": 122.298312,
+        "width": 45,
+        "height": 50
+      },
+      {
+        "id": 4,
+        "title": "去这里",
+        "iconPath": "/images/markers.png",
+        "latitude": 31.150134,
+        "longitude": 121.498312,
+        "width": 45,
+        "height": 50
+      },
+      {
+        "id": 5,
+        "title": "去这里",
+        "iconPath": "/images/markers.png",
+        "latitude": 28.731232,
+        "longitude": 115.832978,
+        "width": 45,
+        "height": 50
+      },
+      {
+        "id": 6,
+        "title": "去这里",
+        "iconPath": "/images/markers.png",
+        "latitude": 28.724559,
+        "longitude": 115.834195,
+        "width": 45,
+        "height": 50
+      },
+      {
+        "id": 7,
+        "title": "去这里",
+        "iconPath": "/images/markers.png",
+        "latitude": 28.682892,
+        "longitude": 115.858198,
+        "width": 45,
+        "height": 50
+      }
+    ],
   },
 
   /**
@@ -90,12 +164,12 @@ Page({
     // 4.请求服务器，显示附近的单车，用marker标记
     wx.request({
       url: 'https://www.easy-mock.com/mock/59098d007a878d73716e966f/ofodata/biyclePosition',
-      data: {},
+      data:{},
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       // header: {}, // 设置请求的 header
       success: (res) => {
         this.setData({
-          markers: res.data.data
+          markers: this.data.marks
         })
       }
     });
@@ -179,7 +253,7 @@ Page({
         break;
       // 点击头像控件，跳转到个人中心
       case 5: wx.navigateTo({
-        url: '../my/index'
+        url: '../account/index'
       });
         break;
       default: break;
