@@ -18,7 +18,7 @@
     <!-- 分类 -->
     <!-- 列表 -->
     <view class='c-listings o-section'>
-      <navigator class="c-listings__item js-listings__item " url="">
+      <navigator class="c-listings__item js-listings__item " url="../detail/detail">
             <image class="ui-o-img c-listings__image" src="http://simages4.juwai.com/auto/480x320/store-aa/9219a573c57d5dfc331533bc20170930.jpg" mode='widthFix'></image>
             <view class="c-listings__detail">
                 <view class="c-listings__price">¥ <text class="c-listings__value">414</text> 万</view>
