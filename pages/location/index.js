@@ -7,7 +7,81 @@ Page({
   data: {
     scale: 18, // 缩放级别，默认18，数值在0~18之间
     latitude: 0, // 给个默认值
-    longitude: 0 // 给个默认值
+    longitude: 0, // 给个默认值
+    markers:[
+      {
+        "id": 0,
+        "title": "查看详情",
+        "iconPath": "/images/markers.png",
+        "latitude": 31.337895,
+        "longitude": 121.447718,
+        "width": 45,
+        "height": 50
+      },
+      {
+        "id": 1,
+        "title": "查看详情",
+        "iconPath": "/images/markers.png", 
+        "latitude": 31.338974,
+        "longitude": 121.44894,
+        "width": 45,
+        "height": 50
+      },
+      {
+        "id": 2,
+        "title": "查看详情",
+        "iconPath": "/images/markers.png", 
+        "latitude": 31.338882,
+        "longitude": 121.443981,
+        "width": 45,
+        "height": 50
+      },
+      {
+        "id": 3,
+        "title": "查看详情",
+        "iconPath": "/images/markers.png", 
+        "latitude": 31.335859,
+        "longitude": 121.453935, 
+        "width": 45,
+        "height": 50
+      },
+      {
+        "id": 4,
+        "title": "查看详情",
+        "iconPath": "/images/markers.png", 
+        "latitude": 31.336075,
+        "longitude": 121.443191,
+        "width": 45,
+        "height": 50
+      },
+      {
+        "id": 5,
+        "title": "查看详情",
+        "iconPath": "/images/markers.png", 
+        "latitude": 31.340085,
+        "longitude": 121.444736,
+        "width": 45,
+        "height": 50
+      },
+      {
+        "id": 6,
+        "title": "查看详情",
+        "iconPath": "/images/markers.png",
+        "latitude": 28.724559,
+        "longitude": 115.834195,
+        "width": 45,
+        "height": 50
+      },
+      {
+        "id": 7,
+        "title": "查看详情",
+        "iconPath": "/images/markers.png",
+        "latitude": 28.682892,
+        "longitude": 115.858198,
+        "width": 45,
+        "height": 50
+      }
+    ]
   },
 
   /**
@@ -95,7 +169,7 @@ Page({
       // header: {}, // 设置请求的 header
       success: (res) => {
         this.setData({
-          markers: res.data.data
+          markers: this.data.markers
         })
       }
     });
@@ -179,7 +253,7 @@ Page({
         break;
       // 点击头像控件，跳转到个人中心
       case 5: wx.navigateTo({
-        url: '../my/index'
+        url: '../account/index'
       });
         break;
       default: break;
@@ -190,20 +264,23 @@ Page({
     let _markers = this.data.markers; // 拿到标记数组
     let markerId = e.markerId; // 获取点击的标记id
     let currMaker = _markers[markerId]; // 通过id,获取当前点击的标记
-    this.setData({
-      polyline: [{
-        points: [{ // 连线起点
-          longitude: this.data.longitude,
-          latitude: this.data.latitude
-        }, { // 连线终点(当前点击的标记)
-          longitude: currMaker.longitude,
-          latitude: currMaker.latitude
-        }],
-        color: "#FF0000DD",
-        width: 1,
-        dottedLine: true
-      }],
-      scale: 18
+    wx.navigateTo({
+      url: '../detail/detail?',
     })
+    // this.setData({
+    //   polyline: [{
+    //     points: [{ // 连线起点
+    //       longitude: this.data.longitude,
+    //       latitude: this.data.latitude
+    //     }, { // 连线终点(当前点击的标记)
+    //       longitude: currMaker.longitude,
+    //       latitude: currMaker.latitude
+    //     }],
+    //     color: "#FF0000DD",
+    //     width: 1,
+    //     dottedLine: true
+    //   }],
+    //   scale: 18
+    // })
   },
 })

@@ -6,7 +6,7 @@
     scale="{{scale}}"
     controls="{{controls}}"
     bindcontroltap="bindcontroltap"
-    polyline="{{polyline}}"
+   
     markers="{{markers}}"
     bindmarkertap="bindmarkertap"
     show-location/>
