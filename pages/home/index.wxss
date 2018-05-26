@@ -374,7 +374,7 @@
 .tell_circle{
   width: 70rpx;
   height: 70rpx;
-  background: #555555;
+  background: #b6b6b6;
   border-radius: 100%;
   text-align: center;
   display: flex;

@@ -6,8 +6,8 @@ Page({
    */
   data: {
     scale: 18, // 缩放级别，默认18，数值在0~18之间
-    latitude: 0, // 给个默认值
-    longitude: 0, // 给个默认值
+    latitude: 0, // 纬度初始值
+    longitude: 0, // 经度初始值
     markers:[
       {
         "id": 0,
@@ -15,8 +15,8 @@ Page({
         "iconPath": "/images/markers.png",
         "latitude": 31.337895,
         "longitude": 121.447718,
-        "width": 45,
-        "height": 50
+        "width": 36,
+        "height": 36
       },
       {
         "id": 1,
@@ -24,8 +24,8 @@ Page({
         "iconPath": "/images/markers.png", 
         "latitude": 31.338974,
         "longitude": 121.44894,
-        "width": 45,
-        "height": 50
+        "width": 36,
+        "height": 36
       },
       {
         "id": 2,
@@ -33,8 +33,8 @@ Page({
         "iconPath": "/images/markers.png", 
         "latitude": 31.338882,
         "longitude": 121.443981,
-        "width": 45,
-        "height": 50
+        "width": 36,
+        "height": 36
       },
       {
         "id": 3,
@@ -42,8 +42,8 @@ Page({
         "iconPath": "/images/markers.png", 
         "latitude": 31.335859,
         "longitude": 121.453935, 
-        "width": 45,
-        "height": 50
+        "width": 36,
+        "height": 36
       },
       {
         "id": 4,
@@ -51,8 +51,8 @@ Page({
         "iconPath": "/images/markers.png", 
         "latitude": 31.336075,
         "longitude": 121.443191,
-        "width": 45,
-        "height": 50
+        "width": 36,
+        "height": 36
       },
       {
         "id": 5,
@@ -60,8 +60,8 @@ Page({
         "iconPath": "/images/markers.png", 
         "latitude": 31.340085,
         "longitude": 121.444736,
-        "width": 45,
-        "height": 50
+        "width": 36,
+        "height": 36
       },
       {
         "id": 6,
@@ -69,8 +69,8 @@ Page({
         "iconPath": "/images/markers.png",
         "latitude": 28.724559,
         "longitude": 115.834195,
-        "width": 45,
-        "height": 50
+        "width": 36,
+        "height": 36
       },
       {
         "id": 7,
@@ -78,8 +78,8 @@ Page({
         "iconPath": "/images/markers.png",
         "latitude": 28.682892,
         "longitude": 115.858198,
-        "width": 45,
-        "height": 50
+        "width": 36,
+        "height": 36
       }
     ]
   },
@@ -174,14 +174,6 @@ Page({
       }
     });
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
   /**
    * 生命周期函数--监听页面显示
    */
@@ -205,82 +197,60 @@ Page({
     // 判断点击的是哪个控件 e.controlId代表控件的id，在页面加载时的第3步设置的id
     switch (e.controlId) {
       // 点击定位控件
-      case 1: this.movetoPosition();
+      case 1: 
+        this.movetoPosition();
         break;
-      // 点击立即用车，判断当前是否正在计费，此处只需要知道是调用扫码，后面会讲到this.timer是怎么来的
-      case 2: if (this.timer === "" || this.timer === undefined) {
-        // 没有在计费就扫码
+      case 2:
+        // 扫码事件
         wx.scanCode({
           success: (res) => {
             // 正在获取密码通知
-            wx.showLoading({
-              title: '正在获取密码',
-              mask: true
-            })
-            // 请求服务器获取密码和车号
-            wx.request({
-              url: 'https://www.easy-mock.com/mock/59098d007a878d73716e966f/ofodata/password',
-              data: {},
-              method: 'GET',
-              success: function (res) {
-                // 请求密码成功隐藏等待框
-                wx.hideLoading();
-                // 携带密码和车号跳转到密码页
-                wx.redirectTo({
-                  url: '../scanresult/index?password=' + res.data.data.password + '&number=' + res.data.data.number,
-                  success: function (res) {
-                    wx.showToast({
-                      title: '获取密码成功',
-                      duration: 1000
-                    })
-                  }
-                })
-              }
-            })
+            console.log('success');
           }
-        })
-        // 当前已经在计费就回退到计费页
-      } else {
-        wx.navigateBack({
-          delta: 1
-        })
-      }
+        });
         break;
       // 点击保障控件，跳转到报障页
-      case 3: wx.navigateTo({
-        url: '../warn/index'
-      });
+      case 3: 
+        wx.navigateTo({
+          url: '../warn/index'
+        });
         break;
       // 点击头像控件，跳转到个人中心
-      case 5: wx.navigateTo({
-        url: '../account/index'
-      });
+      case 5: 
+        wx.navigateTo({
+          url: '../account/index'
+        });
         break;
       default: break;
     }
   },
   // 地图标记点击事件，连接用户位置和点击的单车位置
   bindmarkertap: function (e) {
-    let _markers = this.data.markers; // 拿到标记数组
+    // let _markers = this.data.markers; // 拿到标记数组
     let markerId = e.markerId; // 获取点击的标记id
-    let currMaker = _markers[markerId]; // 通过id,获取当前点击的标记
     wx.navigateTo({
-      url: '../detail/detail?',
+      url: '../detail/detail?id=' + markerId,
     })
-    // this.setData({
-    //   polyline: [{
-    //     points: [{ // 连线起点
-    //       longitude: this.data.longitude,
-    //       latitude: this.data.latitude
-    //     }, { // 连线终点(当前点击的标记)
-    //       longitude: currMaker.longitude,
-    //       latitude: currMaker.latitude
-    //     }],
-    //     color: "#FF0000DD",
-    //     width: 1,
-    //     dottedLine: true
-    //   }],
-    //   scale: 18
-    // })
+  },
+  // 拖动地图事件
+  bindregionchange: function (e) {
+    // 拖动地图，获取附件单车位置
+    if (e.type == "begin") {
+      wx.request({
+        url: 'https://www.easy-mock.com/mock/59098d007a878d73716e966f/ofodata/biyclePosition',
+        data: {},
+        method: 'GET',
+        success: (res) => {
+          this.setData({
+            _markers: this.data.markers
+          })
+        }
+      })
+      // 停止拖动，显示单车位置
+    } else if (e.type == "end") {
+      this.setData({
+        markers: this.data._markers
+      })
+    }
   },
 })

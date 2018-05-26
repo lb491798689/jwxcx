@@ -9,5 +9,6 @@
    
     markers="{{markers}}"
     bindmarkertap="bindmarkertap"
+    bindregionchange="bindregionchange"
     show-location/>
 </view>

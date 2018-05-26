@@ -12,7 +12,7 @@
     "backgroundTextStyle": "dark",
     "backgroundColor": "#efefef",
     "navigationBarBackgroundColor": "#ffffff",
-    "navigationBarTitleText": "Juwai小程序测试",
+    "navigationBarTitleText": "Juwai",
     "navigationBarTextStyle": "black"
   },
   "networkTimeout": {

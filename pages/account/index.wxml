@@ -1,4 +1,74 @@
-<view>
-    <!-- wxp template -->
-    <view>Account Page</view>
+<view class='content' class='s-detail'>
+  <view class="c-header">
+    <view class="c-header__container">
+        <view>
+            <image class="c-header__logo" src="//www.juwaistatic.com/redstar/assets/images/logo-juwai.a302af13.png"></image>
+        </view>
+        <view class="c-header__search js-search">
+            <navigator>
+               <icon type='search' size='16'></icon>
+               <text>国家 / 州 /省 / 城市 /编号</text>
+            </navigator>
+        </view>
+    </view>
+  </view>
+  <view class="o-container">
+    <view class="o-container__full-width">
+      <section class="c-account-banner">
+      <view class="c-account-banner__content">
+        <view class="c-account-banner__avatar-wrap">
+          <image src="//www.juwaistatic.com/redstar/assets/images/branding/default-avatar.c32fdff4.png" class="c-account-banner__avatar" alt="" ></image>
+        </view>
+        <view class="c-account-banner__user-info">
+          <view>
+            <view class="c-account-banner__name">
+              <navigator class="c-account-banner__href" href="/login">登录</navigator> |
+              <navigator class="c-account-banner__href" href="/register">注册</navigator>
+            </view>
+            <view class="c-account-banner__phone">
+              <text class="c-account-banner__desc-text">成为居外会员后，</text>
+            </view>
+            <view class="c-account-banner__email">
+              <text class="c-account-banner__desc-text">您可以体验我们更好的服务</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <image class="c-account-banner__background-image" src="//www.juwaistatic.com/redstar/assets/images/branding/jw_chop.669b7212.png" alt=""></image>
+      </section>
+    </view>
+    <view class="c-function-list">
+      <section class="c-row">
+      <navigator class="c-row__item" href="http://m.juwai.com/account/enquiry-records">
+      <i class="ui-o-icon__enquire c-row__item-icon"></i>
+      <text class="c-row__item-text">询盘记录</text>
+      </navigator>
+      <navigator class="c-row__item" href="http://m.juwai.com/account/notification-settings">
+      <i class="ui-o-icon__notification--setting c-row__item-icon"></i>
+      <text class="c-row__item-text">邮件提醒</text>
+      </navigator>
+      <navigator class="c-row__item" href="http://m.juwai.com/account/profile">
+      <i class="ui-o-icon__profile c-row__item-icon"></i>
+      <text class="c-row__item-text">帐户资料</text>
+      </navigator>
+      </section>
+      <view class="o-middle-line">
+        我的收藏
+      </view>
+      <section class="c-row">
+      <navigator class="c-row__item" href="http://m.juwai.com/account/favorite-listings">
+      <i class="ui-o-icon__property c-row__item-icon"></i>
+      <text class="c-row__item-text">房源</text>
+      </navigator>
+      <navigator class="c-row__item" href="http://m.juwai.com/account/favorite-filters">
+      <i class="ui-o-icon__search c-row__item-icon"></i>
+      <text class="c-row__item-text">搜索条件</text>
+      </navigator>
+      <navigator class="c-row__item" href="http://m.juwai.com/account/favorite-agencies">
+      <i class="ui-o-icon__company c-row__item-icon"></i>
+      <text class="c-row__item-text">房产中介</text>
+      </navigator>
+      </section>
+    </view>
+  </view>
 </view>
