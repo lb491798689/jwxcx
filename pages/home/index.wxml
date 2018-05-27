@@ -286,23 +286,23 @@
 <view id="mk-navigation" class="c-navigation">
     <view class="c-navigation__links">
         <navigator class="c-navigation__link is-active" data-page-name="home">
-            <image src='../../images/11.jpg'></image>
+            <image src='../../images/2.jpg'></image>
             <text class="c-navigation__text">首页</text>
         </navigator>
         <navigator url='../list/list' class="c-navigation__link" data-page-name="listings">
-            <image src='../../images/22.gif'></image>
+            <image src='../../images/3.jpg'></image>
             <text class="c-navigation__text">房源</text>
         </navigator>
         <navigator url='../location/index' class="c-navigation__link c-navigation__link--middle">
-            <view class='tell_circle'><image src='../../images/33.jpg'></image></view>
+            <view class='tell_circle'><image src='../../images/5.jpg'></image></view>
             <text class="c-navigation__text">地图找房</text>
         </navigator>
         <navigator url="../enquiry/index" class="c-navigation__link mk-navigation__enquiry" data-page-name="enquiry">
-            <image src='../../images/44.gif'></image>
+            <image src='../../images/7.jpg'></image>
             <text class="c-navigation__text">查询</text>
         </navigator>
         <navigator url="../account/index" class="c-navigation__link" data-page-name="account">
-            <image src='../../images/55.gif'></image>
+            <image src='../../images/9.jpg'></image>
             <text class="c-navigation__text">我的</text>
         </navigator>
     </view>

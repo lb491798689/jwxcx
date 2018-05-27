@@ -364,26 +364,3 @@
 .c-thumbnail-listings__price{
   font-size: 24rpx
 }
-#mk-thumbnail-listings__list .o-swipe__item{
-  text-align: center
-}
-#mk-navigation image{
-  width: 44rpx;
-  height: 44rpx
-}
-.tell_circle{
-  width: 70rpx;
-  height: 70rpx;
-  background: #b6b6b6;
-  border-radius: 100%;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: -20%
-}
-.c-navigation__link--middle text{
-    position: relative;
-    bottom: -22rpx;
-}
