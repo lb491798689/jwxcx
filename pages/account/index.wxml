@@ -40,15 +40,15 @@
     <view class="c-function-list">
       <section class="c-row">
       <navigator class="c-row__item" href="http://m.juwai.com/account/enquiry-records">
-      <i class="ui-o-icon__enquire c-row__item-icon"></i>
+      <image src='../../images/a1.png'></image>
       <text class="c-row__item-text">询盘记录</text>
       </navigator>
       <navigator class="c-row__item" href="http://m.juwai.com/account/notification-settings">
-      <i class="ui-o-icon__notification--setting c-row__item-icon"></i>
+       <image src='../../images/a2.png'></image>
       <text class="c-row__item-text">邮件提醒</text>
       </navigator>
       <navigator class="c-row__item" href="http://m.juwai.com/account/profile">
-      <i class="ui-o-icon__profile c-row__item-icon"></i>
+       <image src='../../images/a3.png'></image>
       <text class="c-row__item-text">帐户资料</text>
       </navigator>
       </section>
@@ -57,18 +57,45 @@
       </view>
       <section class="c-row">
       <navigator class="c-row__item" href="http://m.juwai.com/account/favorite-listings">
-      <i class="ui-o-icon__property c-row__item-icon"></i>
+       <image src='../../images/a4.png'></image>
       <text class="c-row__item-text">房源</text>
       </navigator>
       <navigator class="c-row__item" href="http://m.juwai.com/account/favorite-filters">
-      <i class="ui-o-icon__search c-row__item-icon"></i>
+       <image src='../../images/a5.png'></image>
       <text class="c-row__item-text">搜索条件</text>
       </navigator>
       <navigator class="c-row__item" href="http://m.juwai.com/account/favorite-agencies">
-      <i class="ui-o-icon__company c-row__item-icon"></i>
+      <image src='../../images/a6.png'></image>
       <text class="c-row__item-text">房产中介</text>
       </navigator>
       </section>
     </view>
   </view>
+  <!--footer-->
+  <view class="o-footer">
+      <view class="c-footer">
+          <text class='c-footer__title'>居外能为您做什么？</text>
+          <text class='c-footer__p'>作为最大型的中文国际房产搜索引擎,居外网以一站式平台为全球华人提供90个国家逾两百万条环球房源，包括投资型房产、移民型房产、留学类房产、美国 EB-5 投资移民的开发项目等。我们以最具时效的海外房产新闻市场分析和置业指南，助您做出更英明的投资决策。全中文在线房产搜索系统和应用程序也让您得以跨越语言和文化障碍寻觅海外理想家园。
+          </text>
+      </view>
+      <view class="c-footer__links">
+          <!-- <wxc-flex class="wrap" wrap="wrap" main="center" cross="center" _pid="{{_pid}}"> -->
+              <view>
+                <view class="item">关于我们|</view>
+              <view class="item">加入我们|</view>
+              <view class="item">媒体报道|</view>
+              <view class="item">海外房展|</view>
+              <view class="item">联络我们|</view>
+              </view>
+              <view>
+              <view class="item">版权所有 隐私条款 投资须知|</view>
+              <view class="item">环球资讯|</view>
+              <view class="item">Advertise</view>
+              </view>
+              
+          <!-- </wxc-flex> -->
+          <text>宏居网络技术（上海）有限公司@JUWAI LIMITEN 2011-2018 版权所有 沪ICP备12045782号</text>
+      </view>
+  </view>
+  <!--footer-->
 </view>

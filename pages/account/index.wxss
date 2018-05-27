@@ -49,6 +49,114 @@ image{
     color: #e60000;
     vertical-align: middle
 }
-.slide_img image{
-  width: 100%
+.o-container {
+    padding: 0 10px;
+}
+.o-container .o-container__full-width {
+    margin-right: -10rpx;
+    margin-left: -10rpx;
+}
+.c-account-banner {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, #e60000 0%, #bf0000 100%);
+}
+.c-account-banner .c-account-banner__content {
+    height: 60rpx;
+    margin: 22rpx 10rpx 20rpx;
+    box-sizing: padding-box;
+}
+.c-account-banner .c-account-banner__content .c-account-banner__avatar-wrap {
+    float: left;
+    width: 60rpx;
+    height: 60rpx;
+    border: 1rpx solid #fff;
+}
+.c-account-banner .c-account-banner__content .c-account-banner__avatar {
+    width: 100%;
+    height: 100%;
+}
+.c-account-banner__background-image {
+    vertical-align: middle;
+    border:0;
+}
+.c-account-banner .c-account-banner__content .c-account-banner__user-info {
+    float: left;
+    padding: 2rpx 0 0 8px;
+}
+.c-account-banner__user-info {
+    color: #fff;
+}
+.c-account-banner__user-info .c-account-banner__name {
+    font-size: 16rpx;
+    font-weight: 600;
+}
+.c-account-banner__user-info {
+    color: #fff;
+}
+.c-account-banner__user-info .c-account-banner__href {
+    color: #fff;
+}
+.c-account-banner__user-info .c-account-banner__desc-text {
+    font-size: 12rpx;
+    font-weight: 200;
+}
+.c-account-banner .c-account-banner__background-image {
+    position: absolute;
+    right: 0;
+    bottom: -10rpx;
+}
+.c-function-list {
+    padding: 10rpx;
+    box-sizing: border-box;
+}
+.c-function-list image {
+  width: 70rpx;
+  height: 70rpx;
+}
+.c-row {
+    display: -ms-flexbox;
+    display: flex;
+    height: 66rpx;
+    margin: 10rpx 0 30rpx;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+.o-middle-line {
+    overflow: hidden;
+    color: #ddd;
+    text-align: center;
+}
+
+
+
+
+.o-footer{
+    padding: 40rpx 20rpx;
+    font-size: 20rpx;
+    color: #fff;
+    background: #333;
+}
+.c-footer__title{
+  margin-top: 0;
+  font-size: 32rpx;
+  display: block
+}
+.c-footer__p{
+  margin: 0 0 20rpx
+}
+.c-footer__links{
+      margin-top: 40rpx;
+    border-top: 1px solid #fff;
+    padding-top: 20rpx;
+    text-align: center;
+}
+.c-footer__links > view{
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.c-footer__links > text{
+  display: block;
+  margin-top: 20rpx
 }
