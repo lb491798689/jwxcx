@@ -49,6 +49,7 @@ image{
     color: #e60000;
     vertical-align: middle
 }
+
 .o-container {
     padding: 0 10px;
 }
@@ -62,15 +63,16 @@ image{
     background: linear-gradient(180deg, #e60000 0%, #bf0000 100%);
 }
 .c-account-banner .c-account-banner__content {
-    height: 60rpx;
-    margin: 22rpx 10rpx 20rpx;
+    height: 120rpx;
+    margin: 44rpx 20rpx 40rpx;
     box-sizing: padding-box;
+    float:left;
 }
 .c-account-banner .c-account-banner__content .c-account-banner__avatar-wrap {
     float: left;
-    width: 60rpx;
-    height: 60rpx;
-    border: 1rpx solid #fff;
+    width: 120rpx;
+    height: 120rpx;
+    border: 2rpx solid #fff;
 }
 .c-account-banner .c-account-banner__content .c-account-banner__avatar {
     width: 100%;
@@ -79,6 +81,9 @@ image{
 .c-account-banner__background-image {
     vertical-align: middle;
     border:0;
+    width: 200rpx;
+    height: 200rpx;
+    float:right;
 }
 .c-account-banner .c-account-banner__content .c-account-banner__user-info {
     float: left;
@@ -88,49 +93,73 @@ image{
     color: #fff;
 }
 .c-account-banner__user-info .c-account-banner__name {
-    font-size: 16rpx;
+    font-size: 32rpx;
     font-weight: 600;
 }
-.c-account-banner__user-info {
-    color: #fff;
-}
-.c-account-banner__user-info .c-account-banner__href {
-    color: #fff;
+.c-account-banner__user-info .c-account-banner__name .c-account-banner__href{
+    display:initial;
 }
 .c-account-banner__user-info .c-account-banner__desc-text {
-    font-size: 12rpx;
+    font-size: 24rpx;
     font-weight: 200;
 }
-.c-account-banner .c-account-banner__background-image {
-    position: absolute;
-    right: 0;
-    bottom: -10rpx;
-}
 .c-function-list {
-    padding: 10rpx;
+    padding: 20rpx;
     box-sizing: border-box;
 }
 .c-function-list image {
-  width: 70rpx;
-  height: 70rpx;
+  width: 140rpx;
+  height: 140rpx;
 }
 .c-row {
     display: -ms-flexbox;
     display: flex;
-    height: 66rpx;
-    margin: 10rpx 0 30rpx;
+    height: 132rpx;
+    margin: 20rpx 0 60rpx;
     -ms-flex-pack: distribute;
     justify-content: space-around;
+}
+.c-row .c-row__item {
+  text-align:center;
+}
+.c-row .c-row__item-text {
+    display: inline-block;
+    width: 100%;
+    font-size: 28rpx;
+    color: #333;
+    text-align: center;
 }
 .o-middle-line {
     overflow: hidden;
     color: #ddd;
     text-align: center;
 }
-
-
-
-
+.o-middle-line:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+.o-middle-line:before, .o-middle-line:after {
+    position: relative;
+    display: inline-block;
+    width: 45%;
+    height: 2rpx;
+    vertical-align: middle;
+    background-color: #ddd;
+    content: " ";
+}
+.o-middle-line:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+.o-middle-line:before, .o-middle-line:after {
+    position: relative;
+    display: inline-block;
+    width: 45%;
+    height: 2rpx;
+    vertical-align: middle;
+    background-color: #ddd;
+    content: " ";
+}
 .o-footer{
     padding: 40rpx 20rpx;
     font-size: 20rpx;

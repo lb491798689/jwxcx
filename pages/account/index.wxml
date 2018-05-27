@@ -12,30 +12,31 @@
         </view>
     </view>
   </view>
+
   <view class="o-container">
     <view class="o-container__full-width">
-      <section class="c-account-banner">
-      <view class="c-account-banner__content">
-        <view class="c-account-banner__avatar-wrap">
-          <image src="//www.juwaistatic.com/redstar/assets/images/branding/default-avatar.c32fdff4.png" class="c-account-banner__avatar" alt="" ></image>
-        </view>
-        <view class="c-account-banner__user-info">
-          <view>
-            <view class="c-account-banner__name">
-              <navigator class="c-account-banner__href" href="/login">登录</navigator> |
-              <navigator class="c-account-banner__href" href="/register">注册</navigator>
-            </view>
-            <view class="c-account-banner__phone">
-              <text class="c-account-banner__desc-text">成为居外会员后，</text>
-            </view>
-            <view class="c-account-banner__email">
-              <text class="c-account-banner__desc-text">您可以体验我们更好的服务</text>
+      <view class="c-account-banner">
+        <view class="c-account-banner__content">
+          <view class="c-account-banner__avatar-wrap">
+            <image src="//www.juwaistatic.com/redstar/assets/images/branding/default-avatar.c32fdff4.png" class="c-account-banner__avatar" alt="" ></image>
+          </view>
+          <view class="c-account-banner__user-info">
+            <view>
+              <view class="c-account-banner__name">
+                <navigator class="c-account-banner__href" href="/login">登录</navigator> |
+                <navigator class="c-account-banner__href" href="/register">注册</navigator>
+              </view>
+              <view class="c-account-banner__phone">
+                <text class="c-account-banner__desc-text">成为居外会员后，</text>
+              </view>
+              <view class="c-account-banner__email">
+                <text class="c-account-banner__desc-text">您可以体验我们更好的服务</text>
+              </view>
             </view>
           </view>
         </view>
+        <image class="c-account-banner__background-image" src="//www.juwaistatic.com/redstar/assets/images/branding/jw_chop.669b7212.png" alt=""></image>
       </view>
-      <image class="c-account-banner__background-image" src="//www.juwaistatic.com/redstar/assets/images/branding/jw_chop.669b7212.png" alt=""></image>
-      </section>
     </view>
     <view class="c-function-list">
       <section class="c-row">
@@ -98,4 +99,28 @@
       </view>
   </view>
   <!--footer-->
+  <view id="mk-navigation" class="c-navigation">
+    <view class="c-navigation__links">
+        <navigator class="c-navigation__link is-active" data-page-name="home">
+            <image src='../../images/1.jpg'></image>
+            <text class="c-navigation__text">首页</text>
+        </navigator>
+        <navigator url='../list/list' class="c-navigation__link" data-page-name="listings">
+            <image src='../../images/3.jpg'></image>
+            <text class="c-navigation__text">房源</text>
+        </navigator>
+        <navigator url='../location/index' class="c-navigation__link c-navigation__link--middle">
+            <view class='tell_circle'><image src='../../images/5.jpg'></image></view>
+            <text class="c-navigation__text">地图找房</text>
+        </navigator>
+        <navigator url="../enquiry/index" class="c-navigation__link mk-navigation__enquiry" data-page-name="enquiry">
+            <image src='../../images/7.jpg'></image>
+            <text class="c-navigation__text">查询</text>
+        </navigator>
+        <navigator url="../account/index" class="c-navigation__link" data-page-name="account">
+            <image src='../../images/10.jpg'></image>
+            <text class="c-navigation__text">我的</text>
+        </navigator>
+    </view>
+</view>
 </view>
