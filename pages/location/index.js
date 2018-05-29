@@ -6,8 +6,10 @@ Page({
    */
   data: {
     scale: 18, // 缩放级别，默认18，数值在0~18之间
-    latitude: 0, // 纬度初始值
-    longitude: 0, // 经度初始值
+    latitude: 31.337880, // 纬度初始值
+    longitude: 121.447718, // 经度初始值
+    mapheight:100,
+    ifShowInfo:true,
     markers:[
       {
         "id": 0,
@@ -93,8 +95,8 @@ Page({
       // 获取经纬度成功回调
       success: (res) => { // es6 箭头函数，可以解绑当前作用域的this指向，使得下面的this可以绑定到Page对象
         this.setData({  // 为data对象里定义的经纬度默认值设置成获取到的真实经纬度，这样就可以在地图上显示我们的真实位置
-          longitude: res.longitude,
-          latitude: res.latitude
+          // longitude: res.longitude,
+          // latitude: res.latitude
         })
       }
     });
@@ -113,17 +115,6 @@ Page({
               height: 50 // 控件高度/px
             },
             clickable: true // 是否可点击，默认为true,可点击
-          },
-          {
-            id: 2,
-            iconPath: '/images/use.png',
-            position: {
-              left: res.windowWidth / 2 - 45,
-              top: res.windowHeight - 100,
-              width: 90,
-              height: 90
-            },
-            clickable: true
           },
           {
             id: 3,
@@ -200,15 +191,6 @@ Page({
       case 1: 
         this.movetoPosition();
         break;
-      case 2:
-        // 扫码事件
-        wx.scanCode({
-          success: (res) => {
-            // 正在获取密码通知
-            console.log('success');
-          }
-        });
-        break;
       // 点击保障控件，跳转到报障页
       case 3: 
         wx.navigateTo({
@@ -228,9 +210,20 @@ Page({
   bindmarkertap: function (e) {
     // let _markers = this.data.markers; // 拿到标记数组
     let markerId = e.markerId; // 获取点击的标记id
-    wx.navigateTo({
-      url: '../detail/detail?id=' + markerId,
-    })
+    // wx.navigateTo({
+    //   url: '../detail/detail?id=' + markerId,
+    // })
+    this.setData({
+      ifShowInfo:true,
+      mapheight:70,
+    });
+  },
+  //点击地图事件，用于控制显示详情弹窗的隐藏
+  showInfo:function(){
+    this.setData({
+      ifShowInfo:true,
+      mapheight:65,
+    });
   },
   // 拖动地图事件
   bindregionchange: function (e) {
