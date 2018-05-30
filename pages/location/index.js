@@ -13,7 +13,7 @@ Page({
     markers:[
       {
         "id": 0,
-        "title": "查看详情",
+        "title": "美国加州洛杉矶4卧5卫最近整修过的房产",
         "iconPath": "/images/markers.png",
         "latitude": 31.337895,
         "longitude": 121.447718,
@@ -22,7 +22,7 @@ Page({
       },
       {
         "id": 1,
-        "title": "查看详情",
+        "title": "美国纽约州Manhattan3卧3卫新开发的房产",
         "iconPath": "/images/markers.png", 
         "latitude": 31.338974,
         "longitude": 121.44894,
@@ -31,7 +31,7 @@ Page({
       },
       {
         "id": 2,
-        "title": "查看详情",
+        "title": "美国纽约州Long Island City1卫新房的房产",
         "iconPath": "/images/markers.png", 
         "latitude": 31.338882,
         "longitude": 121.443981,
@@ -40,7 +40,7 @@ Page({
       },
       {
         "id": 3,
-        "title": "查看详情",
+        "title": "美国佛罗里达州阳光岛海滩2卧2卫新房的房产",
         "iconPath": "/images/markers.png", 
         "latitude": 31.335859,
         "longitude": 121.453935, 
@@ -49,7 +49,7 @@ Page({
       },
       {
         "id": 4,
-        "title": "查看详情",
+        "title": "美国加州洛杉矶4卧5卫最近整修过的房产",
         "iconPath": "/images/markers.png", 
         "latitude": 31.336075,
         "longitude": 121.443191,
@@ -58,7 +58,7 @@ Page({
       },
       {
         "id": 5,
-        "title": "查看详情",
+        "title": "美国纽约州Manhattan3卧3卫新开发的房产",
         "iconPath": "/images/markers.png", 
         "latitude": 31.340085,
         "longitude": 121.444736,
@@ -67,7 +67,7 @@ Page({
       },
       {
         "id": 6,
-        "title": "查看详情",
+        "title": "美国加州洛杉矶6卧8卫最近整修过的房产",
         "iconPath": "/images/markers.png",
         "latitude": 28.724559,
         "longitude": 115.834195,
@@ -76,12 +76,24 @@ Page({
       },
       {
         "id": 7,
-        "title": "查看详情",
+        "title": "美国佐治亚州亚特兰大新开发的新建房产",
         "iconPath": "/images/markers.png",
         "latitude": 28.682892,
         "longitude": 115.858198,
         "width": 36,
         "height": 36
+      },
+      {
+        "id":8,
+        "title":"美国加州Newport Coast6卧9卫的房产",
+        "iconPath":"/images/markers.png",
+        "latitude": 22.27579,
+        "longitude": 114.17778,
+        "width": 36,
+        "height": 36,
+        "label":{
+          "bgColor":"red"
+        }
       }
     ]
   },
@@ -94,9 +106,10 @@ Page({
       type: "gcj02", // 坐标系类型
       // 获取经纬度成功回调
       success: (res) => { // es6 箭头函数，可以解绑当前作用域的this指向，使得下面的this可以绑定到Page对象
+        console.log(res)
         this.setData({  // 为data对象里定义的经纬度默认值设置成获取到的真实经纬度，这样就可以在地图上显示我们的真实位置
-          // longitude: res.longitude,
-          // latitude: res.latitude
+          longitude: res.longitude,
+          latitude: res.latitude
         })
       }
     });
@@ -152,7 +165,7 @@ Page({
         })
       }
     });
-    // 4.请求服务器，显示附近的单车，用marker标记
+    // 4.请求服务器，显示附近的房源，用marker标记
     wx.request({
       url: 'https://www.easy-mock.com/mock/59098d007a878d73716e966f/ofodata/biyclePosition',
       data: {},
