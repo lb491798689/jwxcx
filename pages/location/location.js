@@ -13,6 +13,7 @@ Page({
     ifShowInfo:true,
     markers:[],
     shareInfo:'',
+    tmpMarkers:[],
   },
   
   /**
@@ -21,11 +22,28 @@ Page({
   _loadData: function () {
     var that = this;
     //获取初始标记点
-    location.GetMarkers((data) => {
-      that.setData({
-        markers: data.data,
-      });
+    wx.getLocation({
+      type: "gcj02", // 坐标系类型
+      // 获取经纬度成功回调
+      success: (res) => {
+        this.setData({
+          // 为data对象里定义的经纬度默认值设置成获取到的真实经纬度，这样就可以在地图上显示我们的真实位置
+          longitude: res.longitude,
+          latitude: res.latitude
+        })
+        //请求当前坐标点附近的房源信息
+        var params = {
+          latitude: this.data.latitude,
+          longitude: this.data.longitude,
+        };
+        location.GetMarkers(params, (data) => {
+          that.setData({
+            markers: data.data,
+          });
+        });
+      }
     });
+    
     //获取分享信息
     var params = {id:3};
     location.GetShareInfo(params,(data) => {
@@ -42,19 +60,7 @@ Page({
     var that = this;
     //1、初始化数据
     that._loadData();
-    //2、获取当前坐标数据
-    wx.getLocation({
-      type: "gcj02", // 坐标系类型
-      // 获取经纬度成功回调
-      success: (res) => { 
-        console.log(res)
-        this.setData({  
-          // 为data对象里定义的经纬度默认值设置成获取到的真实经纬度，这样就可以在地图上显示我们的真实位置
-          longitude: res.longitude,
-          latitude: res.latitude
-        })
-      }
-    });
+    
     // 3.设置地图控件的位置及大小，通过设备宽高定位
     wx.getSystemInfo({ // 系统API,获取系统信息，比如设备宽高
       success: (res) => {
@@ -108,7 +114,7 @@ Page({
       }
     });
   },
-
+  
   /**
    * 生命周期函数--监听页面显示
    */
@@ -181,10 +187,10 @@ Page({
   /**
    * 点击地图事件，用于控制显示详情弹窗的隐藏
    */
-  showInfo:function(){
+  hideInfo:function(){
     this.setData({
-      ifShowInfo:true,
-      mapheight:65,
+      ifShowInfo:false,
+      mapheight:100,
     });
   },
 
@@ -192,22 +198,34 @@ Page({
    * 拖动地图事件
    */
   bindregionchange: function (e) {
+    var that = this;
     // 拖动地图，获取附件房源位置
     if (e.type == "begin") {
-      wx.request({
-        url: 'https://www.easy-mock.com/mock/59098d007a878d73716e966f/ofodata/biyclePosition',
-        data: {},
-        method: 'GET',
+      that.mapCtx.getCenterLocation({
+        type: "gcj02", // 坐标系类型
+        // 获取经纬度成功回调
         success: (res) => {
-          this.setData({
-            _markers: this.data.markers
+          that.setData({
+            // 为data对象里定义的经纬度默认值设置成获取到的真实经纬度，这样就可以在地图上显示我们的真实位置
+            longitude: res.longitude,
+            latitude: res.latitude
           })
+          //请求当前坐标点附近的房源信息
+          var params = {
+            latitude: that.data.latitude,
+            longitude: that.data.longitude,
+          };
+          location.GetMarkers(params, (data) => {
+            that.setData({
+              tmpMarkers: data.data,
+            });
+          });
         }
-      })
+      });
       // 停止拖动，显示房源位置
     } else if (e.type == "end") {
-      this.setData({
-        markers: this.data._markers
+      that.setData({
+        markers: that.data.tmpMarkers
       })
     }
   },

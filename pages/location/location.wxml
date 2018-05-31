@@ -7,7 +7,7 @@
     scale="{{scale}}"
     controls="{{controls}}"
     bindcontroltap="bindcontroltap"
-    bindtap="showInfo"
+    bindtap="hideInfo"
     markers="{{markers}}"
     bindmarkertap="bindmarkertap"
     bindregionchange="bindregionchange"

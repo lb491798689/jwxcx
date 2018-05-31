@@ -8,11 +8,11 @@ class Location extends Base {
   constructor() {
     super();
   }
-
   //从服务端api获取标记点数据方法
-  GetMarkers(callback) {
+  GetMarkers(params, callback) {
     var param = {
       url: '/getmarkers',
+      data: params,
       sCallback: function (data) {
         callback && callback(data);
       }
