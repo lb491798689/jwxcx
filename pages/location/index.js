@@ -18,7 +18,8 @@ Page({
         "latitude": 31.337895,
         "longitude": 121.447718,
         "width": 36,
-        "height": 36
+        "height": 36,
+        "head_url": "http://simages0.juwai.com/auto/480x320/store-aa/56066348084720b27d70661a00aefe7b.jpg",
       },
       {
         "id": 1,
@@ -27,7 +28,8 @@ Page({
         "latitude": 31.338974,
         "longitude": 121.44894,
         "width": 36,
-        "height": 36
+        "height": 36,
+        "head_url": "http://simages0.juwai.com/auto/480x320/store-aa/56066348084720b27d70661a00aefe7b.jpg",
       },
       {
         "id": 2,
@@ -36,7 +38,8 @@ Page({
         "latitude": 31.338882,
         "longitude": 121.443981,
         "width": 36,
-        "height": 36
+        "height": 36,
+        "head_url": "http://simages0.juwai.com/auto/480x320/store-aa/56066348084720b27d70661a00aefe7b.jpg",
       },
       {
         "id": 3,
@@ -45,7 +48,8 @@ Page({
         "latitude": 31.335859,
         "longitude": 121.453935, 
         "width": 36,
-        "height": 36
+        "height": 36,
+        "head_url": "http://simages0.juwai.com/auto/480x320/store-aa/56066348084720b27d70661a00aefe7b.jpg",
       },
       {
         "id": 4,
@@ -54,7 +58,8 @@ Page({
         "latitude": 31.336075,
         "longitude": 121.443191,
         "width": 36,
-        "height": 36
+        "height": 36,
+        "head_url": "http://simages0.juwai.com/auto/480x320/store-aa/56066348084720b27d70661a00aefe7b.jpg",
       },
       {
         "id": 5,
@@ -63,7 +68,8 @@ Page({
         "latitude": 31.340085,
         "longitude": 121.444736,
         "width": 36,
-        "height": 36
+        "height": 36,
+        "head_url": "http://simages0.juwai.com/auto/480x320/store-aa/56066348084720b27d70661a00aefe7b.jpg",
       },
       {
         "id": 6,
@@ -72,7 +78,8 @@ Page({
         "latitude": 28.724559,
         "longitude": 115.834195,
         "width": 36,
-        "height": 36
+        "height": 36,
+        "head_url": "http://simages0.juwai.com/auto/480x320/store-aa/56066348084720b27d70661a00aefe7b.jpg",
       },
       {
         "id": 7,
@@ -81,7 +88,8 @@ Page({
         "latitude": 28.682892,
         "longitude": 115.858198,
         "width": 36,
-        "height": 36
+        "height": 36,
+        "head_url": "http://simages0.juwai.com/auto/480x320/store-aa/56066348084720b27d70661a00aefe7b.jpg",
       },
       {
         "id":8,
@@ -93,7 +101,8 @@ Page({
         "height": 36,
         "label":{
           "bgColor":"red"
-        }
+        },
+        "head_url": "http://simages0.juwai.com/auto/480x320/store-aa/56066348084720b27d70661a00aefe7b.jpg",
       }
     ]
   },
@@ -219,7 +228,7 @@ Page({
       default: break;
     }
   },
-  // 地图标记点击事件，连接用户位置和点击的单车位置
+  // 地图标记点击事件，连接用户位置和点击的房源位置
   bindmarkertap: function (e) {
     // let _markers = this.data.markers; // 拿到标记数组
     let markerId = e.markerId; // 获取点击的标记id
@@ -240,7 +249,7 @@ Page({
   },
   // 拖动地图事件
   bindregionchange: function (e) {
-    // 拖动地图，获取附件单车位置
+    // 拖动地图，获取附件房源位置
     if (e.type == "begin") {
       wx.request({
         url: 'https://www.easy-mock.com/mock/59098d007a878d73716e966f/ofodata/biyclePosition',
@@ -252,11 +261,16 @@ Page({
           })
         }
       })
-      // 停止拖动，显示单车位置
+      // 停止拖动，显示房源位置
     } else if (e.type == "end") {
       this.setData({
         markers: this.data._markers
       })
     }
   },
+  applyReception:function(){
+    wx.makePhoneCall({
+      phoneNumber: '400-041-7515' //仅为示例，并非真实的电话号码
+    })
+  }
 })

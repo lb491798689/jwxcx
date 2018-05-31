@@ -6,7 +6,8 @@
     "pages/property/index",
     "pages/location/index",
     "pages/detail/detail",
-    "pages/list/list"
+    "pages/list/list",
+    "pages/polyline/polyline"
   ],
   "window": {
     "backgroundTextStyle": "dark",

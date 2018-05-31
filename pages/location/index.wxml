@@ -18,19 +18,18 @@
   bindchange="currentChange">
     <block wx:for="{{markers}}">
       <swiper-item bindtap="gotoDetail" data-item="{{item.data}}">
-      <view style="padding: 0px 10px;" data-item="{{item.data}}">
-        <text data-item="{{item.data}}" class="itemtext_title">{{item.title}} </text>
-        <view style="text-align:right">
-          <image data-item="{{item.data}}" class="img" mode="aspectFill" src="{{item.data.head_url}}"></image>
+        <view style="padding: 0px 10px;" data-item="{{item.data}}">
+          <text class="itemtext_title">{{item.title}} </text>
+          <navigator class="text" url='../polyline/polyline?latitude={{item.latitude}}&longitude={{item.longitude}}'>
+            <text class="sub_title">到这去</text>
+            <text bindtap="applyReception" class="sub_title">申请接待</text>
+          </navigator>
+          <navigator class="text" url='../detail/detail?id={{item.id}}'>
+            <view style="text-align:right">
+              <image class="img" mode="aspectFill" src="{{item.head_url}}"></image>
+            </view>
+          </navigator>
         </view>
-        <text data-item="{{item.data}}" class="address">{{item.data.address}} </text>
-        <view data-item="{{item.data}}" class="support_info">
-          <image data-item="{{item.data}}" src="/imgs/ic_like.png"></image>
-          <text data-item="{{item.data}}">{{item.data.support ? item.data.support : 0}}</text>
-          <image data-item="{{item.data}}" src="/imgs/ic_unlike.png"></image>
-          <text data-item="{{item.data}}">{{item.data.objection ? item.data.objection : 0}}</text>
-        </view>
-      </view>
       </swiper-item>
     </block>
   </swiper>
