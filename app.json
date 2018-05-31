@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/home/index",
+    "pages/home/home",
     "pages/account/index",
     "pages/enquiry/index",
     "pages/property/index",

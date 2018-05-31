@@ -69,7 +69,7 @@
 
   <view id="mk-navigation" class="c-navigation">
     <view class="c-navigation__links">
-        <navigator class="c-navigation__link is-active" data-page-name="home">
+        <navigator url="../home/home" class="c-navigation__link is-active" data-page-name="home">
             <image src='../../images/1.jpg'></image>
             <text class="c-navigation__text">首页</text>
         </navigator>
