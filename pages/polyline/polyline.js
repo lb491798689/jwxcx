@@ -9,28 +9,22 @@ Page({
     polyline: []
   },
   onLoad: function (options) {
-    var _this = this;
-    _this.setData({
-      longitude: app.globalData.longitude,
-      latitude: app.globalData.latitude
-    })
-    _this.routing(options);
+    var that = this;
+    that.routing(options);
     wx.getLocation({
       type: 'gcj02',
       success: function (res) {
-        app.globalData.latitude = res.latitude;
-        app.globalData.longitude = res.longitude;
-        _this.setData({
+        that.setData({
           latitude: res.latitude,
           longitude: res.longitude
         });
-        _this.routing(options);
+        that.routing(options);
       },
       fail: function () {
         console.log("定位失败")
         wx.showModal({
           title: '无法使用该功能',
-          content: '请点击右上角在“关于校园导览”设置中给予定位权限',
+          content: '请点击右上角在“关于居外”设置中给予定位权限',
           showCancel: false,
           success: function (res) {
             wx.navigateBack({
@@ -43,13 +37,12 @@ Page({
     })
   },
   routing: function (options) {
-    var _this = this;
-    let distance = Math.abs(_this.data.longitude - options.longitude) + Math.abs(_this.data.latitude - options.latitude)
-    console.log(distance);
-    var myAmapFun = new amapFile.AMapWX({ key: require('../../config.js').key });
+    var that = this;
+    let distance = Math.abs(that.data.longitude - options.longitude) + Math.abs(that.data.latitude - options.latitude);
+    var myAmapFun = new amapFile.AMapWX({ key: require('../../utils/config.js').Config.mapKey });
     let routeData = {
       origin: options.longitude + ',' + options.latitude,
-      destination: _this.data.longitude + ',' + _this.data.latitude,
+      destination: that.data.longitude + ',' + that.data.latitude,
       success: function (data) {
         var points = [];
         if (data.paths && data.paths[0] && data.paths[0].steps) {
@@ -64,19 +57,19 @@ Page({
             }
           }
         }
-        _this.setData({
+        that.setData({
           markers: [{
             "width": "25",
             "height": "35",
-            iconPath: "/img/mapicon_end.png",
+            iconPath: "/images/mapicon_end.png",
             latitude: options.latitude,
             longitude: options.longitude
           }, {
             "width": "25",
             "height": "35",
-            iconPath: "/img/mapicon_start.png",
-            latitude: _this.data.latitude,
-            longitude: _this.data.longitude
+            iconPath: "/images/mapicon_start.png",
+            latitude: that.data.latitude,
+            longitude: that.data.longitude
           }],
           polyline: [{
             points: points,
@@ -85,7 +78,7 @@ Page({
           }]
         });
         if (data.paths[0] && data.paths[0].distance) {
-          _this.setData({
+          that.setData({
             distance: data.paths[0].distance + '米'
           });
         }

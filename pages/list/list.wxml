@@ -77,7 +77,7 @@
             <image src='../../images/4.jpg'></image>
             <text class="c-navigation__text">房源</text>
         </navigator>
-        <navigator url='../location/index' class="c-navigation__link c-navigation__link--middle">
+        <navigator url='../location/location' class="c-navigation__link c-navigation__link--middle">
             <view class='tell_circle'><image src='../../images/5.jpg'></image></view>
             <text class="c-navigation__text">地图找房</text>
         </navigator>

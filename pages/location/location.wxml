@@ -16,7 +16,7 @@
 <view id="swiper_area" wx-if="{{ifShowInfo}}">
   <swiper current="{{current}}" style="height:{{map_width}}px"
   bindchange="currentChange">
-    <block wx:for="{{markers}}">
+    <block wx:for="{{markers}}" wx:key="index">
       <swiper-item bindtap="gotoDetail" data-item="{{item.data}}">
         <view style="padding: 0px 10px;" data-item="{{item.data}}">
           <text class="itemtext_title">{{item.title}} </text>
