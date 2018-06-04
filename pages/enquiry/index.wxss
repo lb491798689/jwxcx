@@ -23,11 +23,10 @@ form {
     margin-top: 0em;
 }
 .ui-o-form .form-group {
-    height: 100rpx;
-    margin-bottom: 50rpx;
+    /* height: 100rpx; */
+    margin-bottom: 30rpx;
 }
 .ui-o-form .form-control {
-    height: 60rpx;
     border-color: #ddd;
     border-radius: 0;
     box-shadow: none;
@@ -35,20 +34,19 @@ form {
 .form-control {
     display: block;
     width: 100%;
-    height: 68px;
-    padding: 12rpx 0rpx; 
+    height: 70rpx;
+    padding: 12rpx 24rpx; 
     font-size: 28rpx;
-    line-height: 1.42857;
     color: #555;
     background-color: #fff;
     background-image: none;
-    border: 2rpx solid #ccc;
+    border: 1px solid #ccc;
     border-radius: 8rpx;
-    box-shadow: inset 0 2rpx 2rpx rgba(0,0,0,0.075);
-    transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s;
+    box-sizing: border-box
 }
 .c-enquiry__description, .ui-c-enquiry__detail {
-    height: 100rpx!important;
+    height: initial;
 }
 .c-enquiry__submit-button {
     width: 100%;
@@ -82,8 +80,16 @@ form {
 }
 .ui-u-text__align--center {
     text-align: center;
+    font-size: 24rpx;
+    margin-top: 40rpx
 }
 .ui-c-enquiry .ui-c-enquiry__link {
     color: #e60000;
     display:initial;
+}
+.ui-c-enquiry__detail{
+  height: 180rpx
+}
+.c-enquiry__description{
+  height: auto
 }
