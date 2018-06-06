@@ -1,309 +1,316 @@
 <view>
-    <!-- wxp template -->
-    <view class='we__hd'>
-        <!--header-->
-        <view class="search-wrap">
-            <view class="search-location">
-                <image src="http://www.juwaistatic.com/redstar/assets/images/logo-juwai.a302af13.png"></image>
-            </view>
-            <wxc-search class="search" radius="30" mode="static" placeholder="输入国家 / 州 / 省 / 城市 / 编号" _pid="{{_pid}}"></wxc-search>
-        </view>
-        <!--header-->
-
-        <!--轮播图-->
-        <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-            <block wx:for="{{imgUrls}}" wx:key="index">
-                <swiper-item>
-                    <image src="{{item}}" class="slide-image" mode="aspectFill">
-                    </image>
-                </swiper-item>
-            </block>
-        </swiper>
-        <!--轮播图-->
-
-        <!--分类导航-->
-        <wxc-flex class="wrap c-channels" main="around" wrap="wrap" _pid="{{_pid}}">
-            <view class="c-channels__container">
-                <wxc-icon size="80" type="weixin" _pid="{{_pid}}"></wxc-icon>
-                <text class="c-channels__title">环球新盘</text>
-            </view>
-            <view class="c-channels__container">
-                <wxc-icon size="80" type="feedback" _pid="{{_pid}}"></wxc-icon>
-                <text class="c-channels__title">顶级豪宅</text>
-            </view>
-            <view class="c-channels__container">
-                <wxc-icon size="80" type="location" _pid="{{_pid}}"></wxc-icon>
-                <text class="c-channels__title">热点地区</text>
-            </view>
-            <view class="c-channels__container">
-                <wxc-icon size="80" type="address" _pid="{{_pid}}"></wxc-icon>
-                <navigator url='../location/index'>
-                  <text class="c-channels__title">置业咨询</text>
-                </navigator>
-            </view>
-            <view class="c-channels__container">
-                <wxc-icon size="80" type="coupon" _pid="{{_pid}}"></wxc-icon>
-                <text class="c-channels__title">海外投资</text>
-            </view>
-            <view class="c-channels__container">
-                <wxc-icon size="80" type="message" _pid="{{_pid}}"></wxc-icon>
-                <text class="c-channels__title">海外教育</text>
-            </view>
-            <view class="c-channels__container">
-                <wxc-icon size="80" type="share" _pid="{{_pid}}"></wxc-icon>
-                <text class="c-channels__title">移居海外</text>
-            </view>
-            <view class="c-channels__container">
-                <wxc-icon size="80" type="camera" _pid="{{_pid}}"></wxc-icon>
-                <text class="c-channels__title">海外养老</text>
-            </view>
-        </wxc-flex>
-        <!--分类导航-->
-        <!-- 精选 -->
-        <view class="o-section c-featured">
-          <view id="mk-featured__header" class="c-featured__header clearfix">
-              <view class="o-section__name c-featured__name">居外精选</view>
-                          <view class="o-swipe">
-                            <view class="o-swipe__list c-featured__categories">
-                                <text class="o-swipe__item is-active">全部国家</text>
-                                <text class="o-swipe__item">美国</text>
-                                <text class="o-swipe__item">澳大利亚</text>
-                                <text class="o-swipe__item">加拿大</text>
-                                <text class="o-swipe__item">英国</text>
-                                <text class="o-swipe__item">泰国</text>
-                                <text class="o-swipe__item">新西兰</text>
-                                <text class="o-swipe__item">新加坡</text>
-                            </view>
-                        </view>
-                        </view>
-
-                     
-                       <scroll-view id="mk-featured__items" class="o-swipe js-featured__items" scroll-x="true" style="width: 100%">
-                                      <view class="o-swipe__list">
-                                              <navigator url='../detail/detail' class="o-swipe__item c-featured__item js-featured__item mk-featured__item">
-                                                  <image class="c-featured__image" src="http://simages6.juwai.com/auto/240x160/store-aa/817fe22d377f310e1e7db06ba4c43479.jpg"></image>
-                                                  <view class="c-featured__title">4卧4卫新开发的新建房产</view>
-                                                  <view class="c-featured__location">维多利亚州, 波因特库克</view>
-                                              </navigator>
-                                              <navigator class="o-swipe__item c-featured__item js-featured__item mk-featured__item" url="http://m.juwai.com/property/35436305">
-                                                  <image class="c-featured__image" src="http://simages6.juwai.com/auto/240x160/store-aa/817fe22d377f310e1e7db06ba4c43479.jpg"></image>
-                                                  <view class="c-featured__title">4卧4卫新开发的新建房产</view>
-                                                  <view class="c-featured__location">维多利亚州, 波因特库克</view>
-                                              </navigator>
-                                              <navigator class="o-swipe__item c-featured__item js-featured__item mk-featured__item" url="http://m.juwai.com/property/35436305">
-                                                  <image class="c-featured__image" src="http://simages6.juwai.com/auto/240x160/store-aa/817fe22d377f310e1e7db06ba4c43479.jpg"></image>
-                                                  <view class="c-featured__title">4卧4卫新开发的新建房产</view>
-                                                  <view class="c-featured__location">维多利亚州, 波因特库克</view>
-                                              </navigator>
-                                              <navigator class="o-swipe__item c-featured__item js-featured__item mk-featured__item" url="http://m.juwai.com/property/35436305">
-                                                  <image class="c-featured__image" src="http://simages6.juwai.com/auto/240x160/store-aa/817fe22d377f310e1e7db06ba4c43479.jpg"></image>
-                                                  <view class="c-featured__title">4卧4卫新开发的新建房产</view>
-                                                  <view class="c-featured__location">维多利亚州, 波因特库克</view>
-                                              </navigator>
-                                              <navigator class="o-swipe__item c-featured__item js-featured__item mk-featured__item" url="http://m.juwai.com/property/35436305">
-                                                  <image class="c-featured__image" src="http://simages6.juwai.com/auto/240x160/store-aa/817fe22d377f310e1e7db06ba4c43479.jpg"></image>
-                                                  <view class="c-featured__title">4卧4卫新开发的新建房产</view>
-                                                  <view class="c-featured__location">维多利亚州, 波因特库克</view>
-                                              </navigator>
-                                              <navigator class="o-swipe__item c-featured__item js-featured__item mk-featured__item" url="http://m.juwai.com/property/35436305">
-                                                  <image class="c-featured__image" src="http://simages6.juwai.com/auto/240x160/store-aa/817fe22d377f310e1e7db06ba4c43479.jpg"></image>
-                                                  <view class="c-featured__title">4卧4卫新开发的新建房产</view>
-                                                  <view class="c-featured__location">维多利亚州, 波因特库克</view>
-                                              </navigator>
-                                              <navigator class="o-swipe__item c-featured__item js-featured__item mk-featured__item" url="http://m.juwai.com/property/35436305">
-                                                  <image class="c-featured__image" src="http://simages6.juwai.com/auto/240x160/store-aa/817fe22d377f310e1e7db06ba4c43479.jpg"></image>
-                                                  <view class="c-featured__title">4卧4卫新开发的新建房产</view>
-                                                  <view class="c-featured__location">维多利亚州, 波因特库克</view>
-                                              </navigator>
-                                              <navigator class="o-swipe__item c-featured__item js-featured__item mk-featured__item" url="http://m.juwai.com/property/35436305">
-                                                  <image class="c-featured__image" src="http://simages6.juwai.com/auto/240x160/store-aa/817fe22d377f310e1e7db06ba4c43479.jpg"></image>
-                                                  <view class="c-featured__title">4卧4卫新开发的新建房产</view>
-                                                  <view class="c-featured__location">维多利亚州, 波因特库克</view>
-                                              </navigator>
-                                        
-                                      </view>
-                        </scroll-view>
-                      
+  <!-- wxp template -->
+  <view class='we__hd'>
+    <!--header-->
+    <view class="search-wrap">
+      <view class="search-location">
+        <image src="http://www.juwaistatic.com/redstar/assets/images/logo-juwai.a302af13.png"></image>
       </view>
-        <!--热门国家-->
-        <view id="hot-countries" class="c-hot-countries o-section">
-            <text class="o-section__name">热门国家</text>
-            <scroll-view class="w_aul scroll-view_H" scroll-x="true" style="width: 100%">
-                <block wx:for="{{hotCountry}}" wx:key="index">
-                    <view class="w_ali">
-                        <navigator url="../account/index">
-                            <image src="{{item}}"></image>
-                            <text class="ellipsis">澳大利亚</text>
-                        </navigator>
-                    </view>
-                </block>
-            </scroll-view>
+      <wxc-search class="search" radius="30" mode="static" placeholder="输入国家 / 州 / 省 / 城市 / 编号" _pid="{{_pid}}"></wxc-search>
+    </view>
+    <!--header-->
+
+    <!--轮播图-->
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}" wx:key="index">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" mode="aspectFill">
+          </image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <!--轮播图-->
+
+    <!--分类导航-->
+    <wxc-flex class="wrap c-channels" main="around" wrap="wrap" _pid="{{_pid}}">
+      <view class="c-channels__container">
+        <wxc-icon size="80" type="weixin" _pid="{{_pid}}"></wxc-icon>
+        <text class="c-channels__title">环球新盘</text>
+      </view>
+      <view class="c-channels__container">
+        <wxc-icon size="80" type="feedback" _pid="{{_pid}}"></wxc-icon>
+        <text class="c-channels__title">顶级豪宅</text>
+      </view>
+      <view class="c-channels__container">
+        <wxc-icon size="80" type="location" _pid="{{_pid}}"></wxc-icon>
+        <text class="c-channels__title">热点地区</text>
+      </view>
+      <view class="c-channels__container">
+        <wxc-icon size="80" type="address" _pid="{{_pid}}"></wxc-icon>
+        <navigator url='../location/index'>
+          <text class="c-channels__title">置业咨询</text>
+        </navigator>
+      </view>
+      <view class="c-channels__container">
+        <wxc-icon size="80" type="coupon" _pid="{{_pid}}"></wxc-icon>
+        <text class="c-channels__title">海外投资</text>
+      </view>
+      <view class="c-channels__container">
+        <wxc-icon size="80" type="message" _pid="{{_pid}}"></wxc-icon>
+        <text class="c-channels__title">海外教育</text>
+      </view>
+      <view class="c-channels__container">
+        <wxc-icon size="80" type="share" _pid="{{_pid}}"></wxc-icon>
+        <text class="c-channels__title">移居海外</text>
+      </view>
+      <view class="c-channels__container">
+        <wxc-icon size="80" type="camera" _pid="{{_pid}}"></wxc-icon>
+        <text class="c-channels__title">海外养老</text>
+      </view>
+    </wxc-flex>
+    <!--分类导航-->
+    <!-- 精选 -->
+    <view class="o-section c-featured">
+      <view id="mk-featured__header" class="c-featured__header clearfix">
+        <view class="o-section__name c-featured__name">居外精选</view>
+        <view class="o-swipe">
+          <view class="o-swipe__list c-featured__categories">
+            <text class="o-swipe__item is-active">全部国家</text>
+            <text class="o-swipe__item">美国</text>
+            <text class="o-swipe__item">澳大利亚</text>
+            <text class="o-swipe__item">加拿大</text>
+            <text class="o-swipe__item">英国</text>
+            <text class="o-swipe__item">泰国</text>
+            <text class="o-swipe__item">新西兰</text>
+            <text class="o-swipe__item">新加坡</text>
+          </view>
         </view>
-        <!--热门国家-->
-        <!--物业特写-->
-        <view id="hot-countries" class="c-hot-countries c-news o-section">
-            <text class="o-section__name">物业特写</text>
-            <wxc-flex class="c-news__list" wrap="wrap" main="start" _pid="{{_pid}}">
-                <view class="item">
-                    <text>南加州贝尔维诺酒庄“七宗最”——拥有它，你就是美国上流社会缔造者</text>
-                </view>
-                <view class="item">
-                    <text>在纽约富豪“游乐场”东汉普顿 建座“梦中大宅”的最后机会</text>
-                </view>
-                <view class="item">
-                    <text>南加州贝尔维诺酒庄“七宗最”——拥有它，你就是美国上流社会缔造者</text>
-                </view>
-                <view class="item">
-                    <text>在纽约富豪“游乐场”东汉普顿 建座“梦中大宅”的最后机会</text>
-                </view>
-            </wxc-flex>
-            <view>
-              <navigator> 更多居外热点</navigator>
-            </view>
+      </view>
+
+
+      <scroll-view id="mk-featured__items" class="o-swipe js-featured__items" scroll-x="true" style="width: 100%">
+        <view class="o-swipe__list">
+          <navigator url='../detail/detail' class="o-swipe__item c-featured__item js-featured__item mk-featured__item">
+            <image class="c-featured__image" src="http://simages6.juwai.com/auto/240x160/store-aa/817fe22d377f310e1e7db06ba4c43479.jpg"></image>
+            <view class="c-featured__title">4卧4卫新开发的新建房产</view>
+            <view class="c-featured__location">维多利亚州, 波因特库克</view>
+          </navigator>
+          <navigator class="o-swipe__item c-featured__item js-featured__item mk-featured__item" url="http://m.juwai.com/property/35436305">
+            <image class="c-featured__image" src="http://simages6.juwai.com/auto/240x160/store-aa/817fe22d377f310e1e7db06ba4c43479.jpg"></image>
+            <view class="c-featured__title">4卧4卫新开发的新建房产</view>
+            <view class="c-featured__location">维多利亚州, 波因特库克</view>
+          </navigator>
+          <navigator class="o-swipe__item c-featured__item js-featured__item mk-featured__item" url="http://m.juwai.com/property/35436305">
+            <image class="c-featured__image" src="http://simages6.juwai.com/auto/240x160/store-aa/817fe22d377f310e1e7db06ba4c43479.jpg"></image>
+            <view class="c-featured__title">4卧4卫新开发的新建房产</view>
+            <view class="c-featured__location">维多利亚州, 波因特库克</view>
+          </navigator>
+          <navigator class="o-swipe__item c-featured__item js-featured__item mk-featured__item" url="http://m.juwai.com/property/35436305">
+            <image class="c-featured__image" src="http://simages6.juwai.com/auto/240x160/store-aa/817fe22d377f310e1e7db06ba4c43479.jpg"></image>
+            <view class="c-featured__title">4卧4卫新开发的新建房产</view>
+            <view class="c-featured__location">维多利亚州, 波因特库克</view>
+          </navigator>
+          <navigator class="o-swipe__item c-featured__item js-featured__item mk-featured__item" url="http://m.juwai.com/property/35436305">
+            <image class="c-featured__image" src="http://simages6.juwai.com/auto/240x160/store-aa/817fe22d377f310e1e7db06ba4c43479.jpg"></image>
+            <view class="c-featured__title">4卧4卫新开发的新建房产</view>
+            <view class="c-featured__location">维多利亚州, 波因特库克</view>
+          </navigator>
+          <navigator class="o-swipe__item c-featured__item js-featured__item mk-featured__item" url="http://m.juwai.com/property/35436305">
+            <image class="c-featured__image" src="http://simages6.juwai.com/auto/240x160/store-aa/817fe22d377f310e1e7db06ba4c43479.jpg"></image>
+            <view class="c-featured__title">4卧4卫新开发的新建房产</view>
+            <view class="c-featured__location">维多利亚州, 波因特库克</view>
+          </navigator>
+          <navigator class="o-swipe__item c-featured__item js-featured__item mk-featured__item" url="http://m.juwai.com/property/35436305">
+            <image class="c-featured__image" src="http://simages6.juwai.com/auto/240x160/store-aa/817fe22d377f310e1e7db06ba4c43479.jpg"></image>
+            <view class="c-featured__title">4卧4卫新开发的新建房产</view>
+            <view class="c-featured__location">维多利亚州, 波因特库克</view>
+          </navigator>
+          <navigator class="o-swipe__item c-featured__item js-featured__item mk-featured__item" url="http://m.juwai.com/property/35436305">
+            <image class="c-featured__image" src="http://simages6.juwai.com/auto/240x160/store-aa/817fe22d377f310e1e7db06ba4c43479.jpg"></image>
+            <view class="c-featured__title">4卧4卫新开发的新建房产</view>
+            <view class="c-featured__location">维多利亚州, 波因特库克</view>
+          </navigator>
+
         </view>
-        <!--物业特写-->
-        <!-- 国外品牌 -->
-        <view id="mk-sponsors" class="o-section c-sponsors">
-    <view class="o-section__name">国外品牌</view>
-    <view class="o-swipe">
+      </scroll-view>
+
+    </view>
+    <!--热门国家-->
+    <view id="hot-countries" class="c-hot-countries o-section">
+      <text class="o-section__name">热门国家</text>
+      <scroll-view class="w_aul scroll-view_H" scroll-x="true" style="width: 100%">
+        <block wx:for="{{hotCountry}}" wx:key="index">
+          <view class="w_ali">
+            <navigator url="../account/index">
+              <image src="{{item}}"></image>
+              <text class="ellipsis">澳大利亚</text>
+            </navigator>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+    <!--热门国家-->
+    <!--物业特写-->
+    <view id="hot-countries" class="c-hot-countries c-news o-section">
+      <text class="o-section__name">物业特写</text>
+      <wxc-flex class="c-news__list" wrap="wrap" main="start" _pid="{{_pid}}">
+        <view class="item">
+          <text>南加州贝尔维诺酒庄“七宗最”——拥有它，你就是美国上流社会缔造者</text>
+        </view>
+        <view class="item">
+          <text>在纽约富豪“游乐场”东汉普顿 建座“梦中大宅”的最后机会</text>
+        </view>
+        <view class="item">
+          <text>南加州贝尔维诺酒庄“七宗最”——拥有它，你就是美国上流社会缔造者</text>
+        </view>
+        <view class="item">
+          <text>在纽约富豪“游乐场”东汉普顿 建座“梦中大宅”的最后机会</text>
+        </view>
+      </wxc-flex>
+      <view>
+        <navigator> 更多居外热点</navigator>
+      </view>
+    </view>
+    <!--物业特写-->
+    <!-- 国外品牌 -->
+    <view id="mk-sponsors" class="o-section c-sponsors">
+      <view class="o-section__name">国外品牌</view>
+      <view class="o-swipe">
         <view class="o-swipe__list c-sponsors__list">
-                            <navigator class="o-swipe__item mk-sponsors__list" url="">
-                    <image class="c-sponsors__logo" mode='asceptFill'  src="http://simages9.juwai.com/thumb/100x100/store-e/agentadmin/company_logo/415042816-3799defd4f4f3f4452e2d0ec1a3c10a0.jpg"></image>
-                </navigator>
-                            <navigator class="o-swipe__item mk-sponsors__list" href="http://m.juwai.com/company/391984">
-                    <image class="c-sponsors__logo"  mode='asceptFill' src="http://simages8.juwai.com/thumb/100x100/store-e/agentadmin/company_logo/1823142809-adb963eb8fd15d19f8ce37fcb00adcc8.png"></image>
-                </navigator>
-                            <navigator class="o-swipe__item mk-sponsors__list" href="http://m.juwai.com/company/541857">
-                    <image class="c-sponsors__logo" src="http://simages1.juwai.com/thumb/100x100/store-e/agentadmin/company_logo/95790292-10784fe2fa63dce40af589ba18d1eb22.jpg"></image>
-                </navigator>
-                            <navigator class="o-swipe__item mk-sponsors__list" href="http://m.juwai.com/company/573017">
-                    <image class="c-sponsors__logo" src="http://simages6.juwai.com/thumb/100x100/store-e/agentadmin/company_logo/1969931402-21e4fcf73ca9f23a13bf2e72e6bd51b7.jpg"></image>
-                </navigator>
-                            <navigator class="o-swipe__item mk-sponsors__list" href="http://m.juwai.com/company/611801">
-                    <image class="c-sponsors__logo" src="http://simages2.juwai.com/thumb/100x100/store-e/agentadmin/company_logo/1654574305-f1734c8a6b374d48b59dd56cf7d9bad4.jpg"></image>
-                </navigator>
-                            <navigator class="o-swipe__item mk-sponsors__list" href="http://m.juwai.com/company/681847">
-                    <image class="c-sponsors__logo" src="http://simages9.juwai.com/thumb/100x100/store-e/agentadmin/company_logo/729353184-7fb1c9ab3dfdaf80302994fe24fa258b.jpg"></image>
-                </navigator>
-                    </view>
+          <navigator class="o-swipe__item mk-sponsors__list" url="">
+            <image class="c-sponsors__logo" mode='asceptFill' src="http://simages9.juwai.com/thumb/100x100/store-e/agentadmin/company_logo/415042816-3799defd4f4f3f4452e2d0ec1a3c10a0.jpg"></image>
+          </navigator>
+          <navigator class="o-swipe__item mk-sponsors__list" href="http://m.juwai.com/company/391984">
+            <image class="c-sponsors__logo" mode='asceptFill' src="http://simages8.juwai.com/thumb/100x100/store-e/agentadmin/company_logo/1823142809-adb963eb8fd15d19f8ce37fcb00adcc8.png"></image>
+          </navigator>
+          <navigator class="o-swipe__item mk-sponsors__list" href="http://m.juwai.com/company/541857">
+            <image class="c-sponsors__logo" src="http://simages1.juwai.com/thumb/100x100/store-e/agentadmin/company_logo/95790292-10784fe2fa63dce40af589ba18d1eb22.jpg"></image>
+          </navigator>
+          <navigator class="o-swipe__item mk-sponsors__list" href="http://m.juwai.com/company/573017">
+            <image class="c-sponsors__logo" src="http://simages6.juwai.com/thumb/100x100/store-e/agentadmin/company_logo/1969931402-21e4fcf73ca9f23a13bf2e72e6bd51b7.jpg"></image>
+          </navigator>
+          <navigator class="o-swipe__item mk-sponsors__list" href="http://m.juwai.com/company/611801">
+            <image class="c-sponsors__logo" src="http://simages2.juwai.com/thumb/100x100/store-e/agentadmin/company_logo/1654574305-f1734c8a6b374d48b59dd56cf7d9bad4.jpg"></image>
+          </navigator>
+          <navigator class="o-swipe__item mk-sponsors__list" href="http://m.juwai.com/company/681847">
+            <image class="c-sponsors__logo" src="http://simages9.juwai.com/thumb/100x100/store-e/agentadmin/company_logo/729353184-7fb1c9ab3dfdaf80302994fe24fa258b.jpg"></image>
+          </navigator>
+        </view>
+      </view>
     </view>
-</view>
-   <!-- 其他买家也看了 -->
-        <view class="c-thumbnail-listings o-section">
-            <view class="o-section__name">其他买家也看了</view>
-            
-            <scroll-view scroll-x="true" style="width: 100%">
-                
-                <view id="mk-thumbnail-listings__list" class="o-swipe__list">
-                      <navigator class="o-swipe__item">
-                            <image class="c-thumbnail-listings__image" src="http://simages3.juwai.com/auto/240x160/store-aa/02ecc225452c44dfd960347bd19da144.jpg" ></image>
-                            <view class="c-thumbnail-listings__title">4卧5卫的房产</view>
-                            <view class="c-thumbnail-listings__location">中新加坡, 新加坡</view>
-                            <view class="c-thumbnail-listings__detail">4卧5卫</view>
-                            <view class="c-thumbnail-listings__price">
-                                约¥<view class="c-thumbnail-listings__value">3,359</view>万
-                            </view>
-                      </navigator>
-                       <navigator class="o-swipe__item">
-                            <image class="c-thumbnail-listings__image" src="http://simages3.juwai.com/auto/240x160/store-aa/02ecc225452c44dfd960347bd19da144.jpg" ></image>
-                            <view class="c-thumbnail-listings__title">4卧5卫的房产</view>
-                            <view class="c-thumbnail-listings__location">中新加坡, 新加坡</view>
-                            <view class="c-thumbnail-listings__detail">4卧5卫</view>
-                            <view class="c-thumbnail-listings__price">
-                                约¥<view class="c-thumbnail-listings__value">3,359</view>万
-                            </view>
-                      </navigator>
-                      <navigator class="o-swipe__item">
-                            <image class="c-thumbnail-listings__image" src="http://simages3.juwai.com/auto/240x160/store-aa/02ecc225452c44dfd960347bd19da144.jpg" ></image>
-                            <view class="c-thumbnail-listings__title">4卧5卫的房产</view>
-                            <view class="c-thumbnail-listings__location">中新加坡, 新加坡</view>
-                            <view class="c-thumbnail-listings__detail">4卧5卫</view>
-                            <view class="c-thumbnail-listings__price">
-                                约¥<view class="c-thumbnail-listings__value">3,359</view>万
-                            </view>
-                      </navigator>
-                      <navigator class="o-swipe__item">
-                            <image class="c-thumbnail-listings__image" src="http://simages3.juwai.com/auto/240x160/store-aa/02ecc225452c44dfd960347bd19da144.jpg" ></image>
-                            <view class="c-thumbnail-listings__title">4卧5卫的房产</view>
-                            <view class="c-thumbnail-listings__location">中新加坡, 新加坡</view>
-                            <view class="c-thumbnail-listings__detail">4卧5卫</view>
-                            <view class="c-thumbnail-listings__price">
-                                约¥<view class="c-thumbnail-listings__value">3,359</view>万
-                            </view>
-                      </navigator>
-                      <navigator class="o-swipe__item">
-                            <image class="c-thumbnail-listings__image" src="http://simages3.juwai.com/auto/240x160/store-aa/02ecc225452c44dfd960347bd19da144.jpg" ></image>
-                            <view class="c-thumbnail-listings__title">4卧5卫的房产</view>
-                            <view class="c-thumbnail-listings__location">中新加坡, 新加坡</view>
-                            <view class="c-thumbnail-listings__detail">4卧5卫</view>
-                            <view class="c-thumbnail-listings__price">
-                                约¥<view class="c-thumbnail-listings__value">3,359</view>万
-                            </view>
-                      </navigator>
-                </view>
-           </scroll-view>
+    <!-- 其他买家也看了 -->
+    <view class="c-thumbnail-listings o-section">
+      <view class="o-section__name">其他买家也看了</view>
+
+      <scroll-view scroll-x="true" style="width: 100%">
+
+        <view id="mk-thumbnail-listings__list" class="o-swipe__list">
+          <navigator class="o-swipe__item">
+            <image class="c-thumbnail-listings__image" src="http://simages3.juwai.com/auto/240x160/store-aa/02ecc225452c44dfd960347bd19da144.jpg"></image>
+            <view class="c-thumbnail-listings__title">4卧5卫的房产</view>
+            <view class="c-thumbnail-listings__location">中新加坡, 新加坡</view>
+            <view class="c-thumbnail-listings__detail">4卧5卫</view>
+            <view class="c-thumbnail-listings__price">
+              约¥
+              <view class="c-thumbnail-listings__value">3,359</view>万
+            </view>
+          </navigator>
+          <navigator class="o-swipe__item">
+            <image class="c-thumbnail-listings__image" src="http://simages3.juwai.com/auto/240x160/store-aa/02ecc225452c44dfd960347bd19da144.jpg"></image>
+            <view class="c-thumbnail-listings__title">4卧5卫的房产</view>
+            <view class="c-thumbnail-listings__location">中新加坡, 新加坡</view>
+            <view class="c-thumbnail-listings__detail">4卧5卫</view>
+            <view class="c-thumbnail-listings__price">
+              约¥
+              <view class="c-thumbnail-listings__value">3,359</view>万
+            </view>
+          </navigator>
+          <navigator class="o-swipe__item">
+            <image class="c-thumbnail-listings__image" src="http://simages3.juwai.com/auto/240x160/store-aa/02ecc225452c44dfd960347bd19da144.jpg"></image>
+            <view class="c-thumbnail-listings__title">4卧5卫的房产</view>
+            <view class="c-thumbnail-listings__location">中新加坡, 新加坡</view>
+            <view class="c-thumbnail-listings__detail">4卧5卫</view>
+            <view class="c-thumbnail-listings__price">
+              约¥
+              <view class="c-thumbnail-listings__value">3,359</view>万
+            </view>
+          </navigator>
+          <navigator class="o-swipe__item">
+            <image class="c-thumbnail-listings__image" src="http://simages3.juwai.com/auto/240x160/store-aa/02ecc225452c44dfd960347bd19da144.jpg"></image>
+            <view class="c-thumbnail-listings__title">4卧5卫的房产</view>
+            <view class="c-thumbnail-listings__location">中新加坡, 新加坡</view>
+            <view class="c-thumbnail-listings__detail">4卧5卫</view>
+            <view class="c-thumbnail-listings__price">
+              约¥
+              <view class="c-thumbnail-listings__value">3,359</view>万
+            </view>
+          </navigator>
+          <navigator class="o-swipe__item">
+            <image class="c-thumbnail-listings__image" src="http://simages3.juwai.com/auto/240x160/store-aa/02ecc225452c44dfd960347bd19da144.jpg"></image>
+            <view class="c-thumbnail-listings__title">4卧5卫的房产</view>
+            <view class="c-thumbnail-listings__location">中新加坡, 新加坡</view>
+            <view class="c-thumbnail-listings__detail">4卧5卫</view>
+            <view class="c-thumbnail-listings__price">
+              约¥
+              <view class="c-thumbnail-listings__value">3,359</view>万
+            </view>
+          </navigator>
         </view>
-        <!--局外帮您找-->
-        <view class="c-enquiry o-container__full-width">
-            <text>居外帮您找</text>
-            <wxc-input type="text" placeholder="请输入您的姓名*" _pid="{{_pid}}"></wxc-input>
-            <wxc-input type="text" placeholder="请输入您的电话*" _pid="{{_pid}}"></wxc-input>
-            <wxc-input type="text" placeholder="请输入您的邮箱*" _pid="{{_pid}}"></wxc-input>
-            <wxc-button size="large" type="beauty" value="提交" _pid="{{_pid}}"></wxc-button>
-        </view>
-        <!--局外帮您找-->
-        <!--footer-->
-        <view class="o-footer">
-            <view class="c-footer">
-                <text class='c-footer__title'>居外能为您做什么？</text>
-                <text class='c-footer__p'>作为最大型的中文国际房产搜索引擎,居外网以一站式平台为全球华人提供90个国家逾两百万条环球房源，包括投资型房产、移民型房产、留学类房产、美国 EB-5 投资移民的开发项目等。我们以最具时效的海外房产新闻市场分析和置业指南，助您做出更英明的投资决策。全中文在线房产搜索系统和应用程序也让您得以跨越语言和文化障碍寻觅海外理想家园。
+      </scroll-view>
+    </view>
+    <!--局外帮您找-->
+    <view class="c-enquiry o-container__full-width">
+      <text>居外帮您找</text>
+      <wxc-input type="text" placeholder="请输入您的姓名*" _pid="{{_pid}}"></wxc-input>
+      <wxc-input type="text" placeholder="请输入您的电话*" _pid="{{_pid}}"></wxc-input>
+      <wxc-input type="text" placeholder="请输入您的邮箱*" _pid="{{_pid}}"></wxc-input>
+      <wxc-button size="large" type="beauty" value="提交" _pid="{{_pid}}"></wxc-button>
+    </view>
+    <!--局外帮您找-->
+    <!--footer-->
+    <view class="o-footer">
+      <view class="c-footer">
+        <text class='c-footer__title'>居外能为您做什么？</text>
+        <text class='c-footer__p'>作为最大型的中文国际房产搜索引擎,居外网以一站式平台为全球华人提供90个国家逾两百万条环球房源，包括投资型房产、移民型房产、留学类房产、美国 EB-5 投资移民的开发项目等。我们以最具时效的海外房产新闻市场分析和置业指南，助您做出更英明的投资决策。全中文在线房产搜索系统和应用程序也让您得以跨越语言和文化障碍寻觅海外理想家园。
                 </text>
-            </view>
-            <view class="c-footer__links">
-                <!-- <wxc-flex class="wrap" wrap="wrap" main="center" cross="center" _pid="{{_pid}}"> -->
-                    <view>
-                     <view class="item">关于我们|</view>
-                    <view class="item">加入我们|</view>
-                    <view class="item">媒体报道|</view>
-                    <view class="item">海外房展|</view>
-                    <view class="item">联络我们|</view>
-                    </view>
-                   <view>
-                    <view class="item">版权所有 隐私条款 投资须知|</view>
-                    <view class="item">环球资讯|</view>
-                    <view class="item">Advertise</view>
-                   </view>
-                   
-                <!-- </wxc-flex> -->
-                <text>宏居网络技术（上海）有限公司@JUWAI LIMITEN 2011-2018 版权所有 沪ICP备12045782号</text>
-            </view>
+      </view>
+      <view class="c-footer__links">
+        <!-- <wxc-flex class="wrap" wrap="wrap" main="center" cross="center" _pid="{{_pid}}"> -->
+        <view>
+          <view class="item">关于我们|</view>
+          <view class="item">加入我们|</view>
+          <view class="item">媒体报道|</view>
+          <view class="item">海外房展|</view>
+          <view class="item">联络我们|</view>
         </view>
-        <!--footer-->
+        <view>
+          <view class="item">版权所有 隐私条款 投资须知|</view>
+          <view class="item">环球资讯|</view>
+          <view class="item">Advertise</view>
+        </view>
+
+        <!-- </wxc-flex> -->
+        <text>宏居网络技术（上海）有限公司@JUWAI LIMITEN 2011-2018 版权所有 沪ICP备12045782号</text>
+      </view>
     </view>
+    <!--footer-->
+  </view>
 </view>
 
 
 <view id="mk-navigation" class="c-navigation">
-    <view class="c-navigation__links">
-        <navigator class="c-navigation__link is-active" data-page-name="home">
-            <image src='../../images/2.jpg'></image>
-            <text class="c-navigation__text">首页</text>
-        </navigator>
-        <navigator url='../list/list' class="c-navigation__link" data-page-name="listings">
-            <image src='../../images/3.jpg'></image>
-            <text class="c-navigation__text">房源</text>
-        </navigator>
-        <navigator url='../location/location' class="c-navigation__link c-navigation__link--middle">
-            <view class='tell_circle'><image src='../../images/5.jpg'></image></view>
-            <text class="c-navigation__text">地图找房</text>
-        </navigator>
-        <navigator url="../enquiry/index" class="c-navigation__link mk-navigation__enquiry" data-page-name="enquiry">
-            <image src='../../images/7.jpg'></image>
-            <text class="c-navigation__text">查询</text>
-        </navigator>
-        <navigator url="../account/index" class="c-navigation__link" data-page-name="account">
-            <image src='../../images/9.jpg'></image>
-            <text class="c-navigation__text">我的</text>
-        </navigator>
-    </view>
+  <view class="c-navigation__links">
+    <navigator class="c-navigation__link is-active" data-page-name="home">
+      <image src='../../images/2.jpg'></image>
+      <text class="c-navigation__text">首页</text>
+    </navigator>
+    <navigator url='../list/list' class="c-navigation__link" data-page-name="listings">
+      <image src='../../images/3.jpg'></image>
+      <text class="c-navigation__text">房源</text>
+    </navigator>
+    <navigator url='../location/location' class="c-navigation__link c-navigation__link--middle">
+      <view class='tell_circle'>
+        <image src='../../images/5.jpg'></image>
+      </view>
+      <text class="c-navigation__text">地图找房</text>
+    </navigator>
+    <navigator url="../enquiry/index" class="c-navigation__link mk-navigation__enquiry" data-page-name="enquiry">
+      <image src='../../images/7.jpg'></image>
+      <text class="c-navigation__text">查询</text>
+    </navigator>
+    <navigator url="../account/index" class="c-navigation__link" data-page-name="account">
+      <image src='../../images/9.jpg'></image>
+      <text class="c-navigation__text">我的</text>
+    </navigator>
+  </view>
 </view>

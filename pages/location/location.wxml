@@ -22,8 +22,8 @@
           <text class="itemtext_title">{{item.title}} </text>
           <navigator class="text" url='../polyline/polyline?latitude={{item.latitude}}&longitude={{item.longitude}}'>
             <text class="sub_title">到这去</text>
-            <text bindtap="applyReception" class="sub_title">申请接待</text>
           </navigator>
+          <text bindtap="applyReception" class="sub_title">申请接待</text>
           <navigator class="text" url='../detail/detail?id={{item.id}}'>
             <view style="text-align:right">
               <image class="img" mode="aspectFill" src="{{item.head_url}}"></image>

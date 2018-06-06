@@ -10,7 +10,7 @@ Page({
     latitude: 0, // 纬度初始值
     longitude: 0, // 经度初始值
     mapheight:100,
-    ifShowInfo:true,
+    ifShowInfo:false,
     markers:[],
     shareInfo:'',
     tmpMarkers:[],
@@ -72,19 +72,19 @@ Page({
             position: { // 控件位置
               left: 20, // 单位px
               top: res.windowHeight - 350, // 根据设备高度设置top值，可以做到在不同设备上效果一致
-              width: 50, // 控件宽度/px
-              height: 50 // 控件高度/px
+              width: 30, // 控件宽度/px
+              height: 30 // 控件高度/px
             },
             clickable: true // 是否可点击，默认为true,可点击
           },
           {
             id: 3,
-            iconPath: '/images/warn.png',
+            iconPath: '/images/2.jpg',
             position: {
               left: res.windowWidth - 70,
               top: res.windowHeight - 80,
-              width: 50,
-              height: 50
+              width: 30,
+              height: 30
             },
             clickable: true
           },
@@ -101,12 +101,12 @@ Page({
           },
           {
             id: 5,
-            iconPath: '/images/avatar.png',
+            iconPath: '/images/9.jpg',
             position: {
               left: res.windowWidth - 68,
               top: res.windowHeight - 155,
-              width: 45,
-              height: 45
+              width: 30,
+              height: 30
             },
             clickable: true
           }]
@@ -161,7 +161,7 @@ Page({
       // 点击保障控件，跳转到报障页
       case 3: 
         wx.navigateTo({
-          url: '../warn/index'
+          url: '../list/list'
         });
         break;
       // 点击头像控件，跳转到个人中心
