@@ -1,11 +1,5 @@
 <view class="o-container">
 	<view  class="o-modal o-container__full-width">
-		<view class="o-modal__header">
-		<text type="button" class="o-modal__close js-action__go-back">
-		<text class="ui-o-icon__angle--left"></text>
-		</text>
-		<text class="o-modal__title">免费询盘</text>
-		</view>
 		<view  class="o-modal__body">
 			<form class="ui-o-form ui-c-enquiry js-enquiry__form" novalidate="novalidate">
 				<view  class="form-group">
@@ -21,14 +15,14 @@
 								</view >
 							</view >
 						</view >
-						<input class="form-control" name="phone" data-toggle="intl-tel-input" type="text" placeholder="请输入您的电话*" autocomplete="off" />
+						<input class="form-control" name="phone" type="text" placeholder="请输入您的电话*" autocomplete="off" />
 					</view >
 				</view >
 				<view  class="form-group">
 					<input class="form-control" name="email" type="email" placeholder="请输入您的邮箱 *" />
 				</view >
 				<view  class="form-group c-enquiry__description">
-					<textarea class="form-control ui-c-enquiry__detail " name="description" placeholder="您可输入您的置业要求，稍后将有专员电话联系您。如：墨尔本，独栋别墅，靠近墨尔本大学，预算人民币500万" rows="8" />
+					<textarea class="form-control ui-c-enquiry__detail " name="description" placeholder="您可输入您的置业要求，稍后将有专员电话联系您。如：墨尔本，独栋别墅，靠近墨尔本大学，预算人民币500万" />
 				</view >
 				<view class="btn ui-o-button c-enquiry__submit-button js-enquiry__submit-button" type="submit">
         提交
