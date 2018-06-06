@@ -52,6 +52,10 @@
     font-size:28rpx;
     color: #333
   }
+  .c-channels__container image{
+    width: 120rpx;
+    height: 120rpx;
+  }
   .c-hot-countries{
     background: #fff;
     padding: 20rpx 0 10rpx 20rpx;
